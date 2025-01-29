@@ -1,0 +1,124 @@
+--------------------------------------------------------------------------------
+
+test video:
+===========
+
+https://www.9now.com.au/married-at-first-sight/season-10
+https://www.9now.com.au/married-at-first-sight/season-10/episode-1
+
+--------------------------------------------------------------------------------
+
+https://gist.github.com/Haaglar/b78825770794e18b6388838873fe522a
+  very old Python script to obtain HLS video URL given a test video URL
+
+referenceId:
+  cldg88exe001s0jmi6htcr3bk
+
+bcurl = BC_URL_1 + vid + BC_URL_2
+  http://api.brightcove.com/services/library?media_delivery=http&reference_id=cldg88exe001s0jmi6htcr3bk&command=find_video_by_reference_id&token=7jHYJN84oHHRRin6N6JpuDmm3ghgxP4o3GGXsatxe5aDKZ4MGOztLw..&video_fields=accountId%2CshortDescription%2CiOSRenditions%2CWVMRenditions%2CHLSURL%2CvideoFullLength
+
+curl --insecure -H "Referer: https://www.9now.com.au/married-at-first-sight/season-10/episode-1" "http://api.brightcove.com/services/library?media_delivery=http&reference_id=cldg88exe001s0jmi6htcr3bk&command=find_video_by_reference_id&token=7jHYJN84oHHRRin6N6JpuDmm3ghgxP4o3GGXsatxe5aDKZ4MGOztLw..&video_fields=accountId%2CshortDescription%2CiOSRenditions%2CWVMRenditions%2CHLSURL%2CvideoFullLength"
+curl: (6) Could not resolve: api.brightcove.com (DNS server returned answer with no data)
+
+notes:
+  * uses a regex pattern to obtain "referenceId" from HTML source
+    - old regex: /referenceId":"([^"]*)"/
+      matches: 0
+    - new regex: /referenceId\\":\\"([^"]*)\\"/
+      matches: 68
+    - python script assumes that the 1st match is the correct one;
+      this appears to still be correct
+  * attempts to obtain HLS video URL from a brightcove API,
+    which is no-longer in service
+
+--------------------------------------------------------------------------------
+
+https://apis.support.brightcove.com/playback/references/reference_v2.html#tag/Videos/operation/Get_Video_by_ID_or_Reference_ID
+https://edge.api.brightcove.com/playback/v1/accounts/{{account_id}}/videos/ref:{reference_id}
+
+https://www.9now.com.au/married-at-first-sight/season-10/episode-1
+  <script src="//players.brightcove.net/4460760524001/AQkgDJ7lH_default/index.min.js"></script>
+  \"referenceId\":\"cldg88exe001s0jmi6htcr3bk\"
+  \"accountId\":\"4460760524001\"
+
+https://players.brightcove.net/4460760524001/AQkgDJ7lH_default/index.min.js
+  {accountId:"4460760524001",policyKey:"BCpkADawqM17uNt4BA9TibECIvv8vBVypgHHIgThenKM55b88yzwUAmQ5hHbEfpsaQCimxMfcJglqzWqPTc21Mbnt4H-49t8_htP91BPml8bDw7AjWou9m_avlno4V7DBRsuLWdpLOoUMziK",allowPlayreadyInChromiumEdge:false}
+
+policy_key='BCpkADawqM17uNt4BA9TibECIvv8vBVypgHHIgThenKM55b88yzwUAmQ5hHbEfpsaQCimxMfcJglqzWqPTc21Mbnt4H-49t8_htP91BPml8bDw7AjWou9m_avlno4V7DBRsuLWdpLOoUMziK'
+account_id='4460760524001'
+reference_id='cldg88exe001s0jmi6htcr3bk'
+
+curl --insecure \
+  -H "Referer: https://www.9now.com.au/married-at-first-sight/season-10/episode-1" \
+  -H "BCOV-POLICY: ${policy_key}" \
+  "https://edge.api.brightcove.com/playback/v1/accounts/${account_id}/videos/ref:${reference_id}"
+
+--------------------------------------------------------------------------------
+
+test #1:
+========
+
+curl -s -o "./data/1_curl_response.txt" --insecure -H "Referer: https://www.9now.com.au/married-at-first-sight/season-10/episode-1" -H "BCOV-POLICY: BCpkADawqM17uNt4BA9TibECIvv8vBVypgHHIgThenKM55b88yzwUAmQ5hHbEfpsaQCimxMfcJglqzWqPTc21Mbnt4H-49t8_htP91BPml8bDw7AjWou9m_avlno4V7DBRsuLWdpLOoUMziK" "https://edge.api.brightcove.com/playback/v1/accounts/4460760524001/videos/ref:cldg88exe001s0jmi6htcr3bk"
+
+200 OK
+
+--------------------------------------------------------------------------------
+
+test #2:
+========
+
+test HLS .m3u8 manifest URL in curl response:
+
+curl -s -o "./data/2_hls_manifest.m3u8" --insecure -H "Referer: https://www.9now.com.au/married-at-first-sight/season-10/episode-1" "http://manifest.prod.boltdns.net/manifest/v1/hls/v3/clear/4460760524001/f925c416-043d-4c9d-80d1-947913b9a2eb/10s/master.m3u8?fastly_token=Njc5YWNiZThfOTZiODNiNjhlMGMzMWE4NzA0NDk4ZGE2ODk0NTU3MDhjM2VhMzI3NmM5MmNkOTc2M2U0ZTU5NmI2NDE4ZjQyNg%3D%3D"
+
+200 OK
+
+--------------------------------------------------------------------------------
+
+test #3:
+========
+
+test HLS .m3u8 child (1280x720) URL in manifest response:
+
+curl -s -o "./data/3_hls_child.m3u8" --insecure -H "Referer: https://www.9now.com.au/married-at-first-sight/season-10/episode-1" "http://manifest.prod.boltdns.net/manifest/v1/hls/v3/clear/4460760524001/f925c416-043d-4c9d-80d1-947913b9a2eb/c32adf26-f77f-43f0-a86d-bcb8e2a7457b/cf70c875-7b00-431f-bf7a-8a437a9c1a9b/10s/rendition.m3u8?fastly_token=Njc5YWNkNWVfM2U1ZWUwZGRmNTcyMTNjZWRmZDgzNjNjNTQwZTMzN2E2YmQyNjJiMDA2NjRhZWU3MzczZjgxNDAxMGEwYWQxMQ%3D%3D"
+
+200 OK
+
+--------------------------------------------------------------------------------
+
+test #4:
+========
+
+test video .ts segment URL in child response:
+
+curl -s -o "./data/4_segment.ts" --insecure -H "Referer: https://www.9now.com.au/married-at-first-sight/season-10/episode-1" "http://p-9now.akamaized.net/media/v1/hls/v3/clear/4460760524001/f925c416-043d-4c9d-80d1-947913b9a2eb/cf70c875-7b00-431f-bf7a-8a437a9c1a9b/c32adf26-f77f-43f0-a86d-bcb8e2a7457b/5x/segment0.ts?akamai_token=exp=1738199744~acl=/media/v1/hls/v3/clear/4460760524001/f925c416-043d-4c9d-80d1-947913b9a2eb/cf70c875-7b00-431f-bf7a-8a437a9c1a9b/c32adf26-f77f-43f0-a86d-bcb8e2a7457b/*~hmac=603e1a7b50f75fafc627a831eda4df1267a4f1e844b939c7a5ec47a7747705ee"
+
+curl -s I --insecure -H "Referer: https://www.9now.com.au/married-at-first-sight/season-10/episode-1" "http://p-9now.akamaized.net/media/v1/hls/v3/clear/4460760524001/f925c416-043d-4c9d-80d1-947913b9a2eb/cf70c875-7b00-431f-bf7a-8a437a9c1a9b/c32adf26-f77f-43f0-a86d-bcb8e2a7457b/5x/segment0.ts?akamai_token=exp=1738199744~acl=/media/v1/hls/v3/clear/4460760524001/f925c416-043d-4c9d-80d1-947913b9a2eb/cf70c875-7b00-431f-bf7a-8a437a9c1a9b/c32adf26-f77f-43f0-a86d-bcb8e2a7457b/*~hmac=603e1a7b50f75fafc627a831eda4df1267a4f1e844b939c7a5ec47a7747705ee"
+
+302 Moved Temporarily
+Location: https://www.9now.com.au/outside-australia?akamai_token=exp=1738199744~acl=/media/v1/hls/v3/clear/4460760524001/f925c416-043d-4c9d-80d1-947913b9a2eb/cf70c875-7b00-431f-bf7a-8a437a9c1a9b/c32adf26-f77f-43f0-a86d-bcb8e2a7457b/*~hmac=603e1a7b50f75fafc627a831eda4df1267a4f1e844b939c7a5ec47a7747705ee
+
+curl -L -s -o "./data/4_segment.ts" --insecure -H "Referer: https://www.9now.com.au/married-at-first-sight/season-10/episode-1" "http://p-9now.akamaized.net/media/v1/hls/v3/clear/4460760524001/f925c416-043d-4c9d-80d1-947913b9a2eb/cf70c875-7b00-431f-bf7a-8a437a9c1a9b/c32adf26-f77f-43f0-a86d-bcb8e2a7457b/5x/segment0.ts?akamai_token=exp=1738199744~acl=/media/v1/hls/v3/clear/4460760524001/f925c416-043d-4c9d-80d1-947913b9a2eb/cf70c875-7b00-431f-bf7a-8a437a9c1a9b/c32adf26-f77f-43f0-a86d-bcb8e2a7457b/*~hmac=603e1a7b50f75fafc627a831eda4df1267a4f1e844b939c7a5ec47a7747705ee"
+
+curl -L -s -I --insecure -H "Referer: https://www.9now.com.au/married-at-first-sight/season-10/episode-1" "http://p-9now.akamaized.net/media/v1/hls/v3/clear/4460760524001/f925c416-043d-4c9d-80d1-947913b9a2eb/cf70c875-7b00-431f-bf7a-8a437a9c1a9b/c32adf26-f77f-43f0-a86d-bcb8e2a7457b/5x/segment0.ts?akamai_token=exp=1738199744~acl=/media/v1/hls/v3/clear/4460760524001/f925c416-043d-4c9d-80d1-947913b9a2eb/cf70c875-7b00-431f-bf7a-8a437a9c1a9b/c32adf26-f77f-43f0-a86d-bcb8e2a7457b/*~hmac=603e1a7b50f75fafc627a831eda4df1267a4f1e844b939c7a5ec47a7747705ee"
+
+200 OK
+content-type: text/html
+
+<p>Sorry, 9Now is only available in Australia</p>
+
+--------------------------------------------------------------------------------
+
+test #5:
+========
+
+with VPN on device running ExoAirPlayer (receiver app):
+
+http://webcast-reloaded.frii.site/airplay_sender.html
+  video   = http://manifest.prod.boltdns.net/manifest/v1/hls/v3/clear/4460760524001/f925c416-043d-4c9d-80d1-947913b9a2eb/10s/master.m3u8?fastly_token=Njc5YWNiZThfOTZiODNiNjhlMGMzMWE4NzA0NDk4ZGE2ODk0NTU3MDhjM2VhMzI3NmM5MmNkOTc2M2U0ZTU5NmI2NDE4ZjQyNg%3D%3D
+  caption = http://p-9now.akamaized.net/media/v1/text/vtt/clear/4460760524001/f925c416-043d-4c9d-80d1-947913b9a2eb/60d6934a-6821-4ddf-9a9f-f5427d7164e3/text.vtt?akamai_token=exp=1738197992~acl=/media/v1/text/vtt/clear/4460760524001/f925c416-043d-4c9d-80d1-947913b9a2eb/60d6934a-6821-4ddf-9a9f-f5427d7164e3/text.vtt*~hmac=a9de571a9394dff627b9fb5f35da1ed7246c75aef2fc33a2fda299327077b387
+  referer = https://www.9now.com.au/married-at-first-sight/season-10/episode-1
+
+successfully plays video!
+
+--------------------------------------------------------------------------------
