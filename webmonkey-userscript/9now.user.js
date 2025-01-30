@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         9now
 // @description  Improve site usability. Watch videos in external player.
-// @version      1.0.0
-// @match        *://*.9now.com.au/*
+// @version      1.0.1
+// @include      /^https?:\/\/(?:[^\.\/]*\.)*9now\.com\.au\/.+\/episode-\d+(?:[#\?].*)?$/
 // @icon         https://www.9now.com.au/favicon.ico
 // @run-at       document-end
 // @grant        unsafeWindow
