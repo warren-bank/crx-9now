@@ -19,7 +19,7 @@
 
 var user_options = {
   "webmonkey": {
-    "post_intent_redirect_to_url":  "about:blank"
+    "post_intent_redirect_to_url":  null  // "about:blank"
   },
   "greasemonkey": {
     "redirect_to_webcast_reloaded": true,
