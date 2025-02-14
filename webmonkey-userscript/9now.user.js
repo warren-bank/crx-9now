@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         9now
 // @description  Improve site usability. Watch videos in external player.
-// @version      2.1.0
+// @version      2.2.0
 // @include      /^https?:\/\/(?:[^\.\/]*\.)*9now\.com\.au\/.+\/episode-\d+(?:[#\?].*)?$/
 // @icon         https://www.9now.com.au/favicon.ico
 // @run-at       document-end
@@ -528,6 +528,21 @@ var resolve_drm_scheme = function(drm_schemes, drm_key) {
 var reinitialize_dom = function() {
   add_default_trusted_type_policy()
 
+  var keep_elements = {
+    other_episodes: Array.prototype.slice.apply(unsafeWindow.document.querySelectorAll('ul > li > a[href][itemtype="https://schema.org/TVEpisode"]')).map(function($a) {
+      var episode = {
+        url: $a.href,
+        label: ''
+      }
+
+      var label = $a.querySelector(':scope h3[itemprop="name"]')
+      if (label)
+        episode.label = label.textContent
+
+      return episode
+    })
+  }
+
   unsafeWindow.document.close()
   unsafeWindow.document.open()
   unsafeWindow.document.write('')
@@ -553,6 +568,7 @@ var reinitialize_dom = function() {
 
       'body > table td:first-child {',
       '  font-style: italic;',
+      '  padding-left:  1em;',
       '  padding-right: 1em;',
       '}',
 
@@ -563,7 +579,7 @@ var reinitialize_dom = function() {
       '  margin: 0;',
       '}',
 
-      'body > blockquote + div {',
+      'body > div {',
       '  margin: 0.75em;',
       '}',
 
@@ -673,6 +689,8 @@ var reinitialize_dom = function() {
   empty_element(unsafeWindow.document.body, html.join("\n"))
 
   display_video_sources()
+
+  display_other_episodes(keep_elements.other_episodes)
 }
 
 // -----------------------------------------------------------------------------
@@ -808,6 +826,40 @@ var make_webcast_reloaded_div = function(video_data) {
   div.innerHTML = html.join("\n")
 
   return div
+}
+
+// -----------------------------------------------------------------------------
+
+var xxxdisplay_other_episodes = function(other_episodes) {
+  if (!Array.isArray(other_episodes) || !other_episodes.length) return
+
+  var ul = make_element('ul', other_episodes.map(function(episode) {
+    return '<li><a href="' + episode.url + '">' + episode.label + '</a></li>'
+  }).join("\n"))
+
+  unsafeWindow.document.body.appendChild(ul)
+}
+
+// -----------------------------------------------------------------------------
+
+var display_other_episodes = function(other_episodes) {
+  if (!Array.isArray(other_episodes) || !other_episodes.length) return
+
+  var li = other_episodes.map(function(episode) {
+    return '<li><a href="' + episode.url + '">' + episode.label + '</a></li>'
+  }).join("\n")
+
+  var html = [
+    '<hr />',
+    '<h3>More Episodes:</h3>',
+    '<ul>',
+       li,
+    '</ul>'
+  ].join("\n")
+
+  var div = make_element('div', html)
+
+  unsafeWindow.document.body.appendChild(div)
 }
 
 // ----------------------------------------------------------------------------- process window
