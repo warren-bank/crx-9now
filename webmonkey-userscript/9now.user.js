@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         9now
 // @description  Improve site usability. Watch videos in external player.
-// @version      2.2.0
+// @version      2.3.0
 // @include      /^https?:\/\/(?:[^\.\/]*\.)*9now\.com\.au\/.+\/episode-\d+(?:[#\?].*)?$/
 // @icon         https://www.9now.com.au/favicon.ico
 // @run-at       document-end
@@ -909,18 +909,23 @@ var process_window = function() {
     if (!state.policy_key) return
 
     download_video_sources(function(video_sources) {
-      var non_drm_video_sources = video_sources.filter(function(video_data) {
-        return !video_data.drm.scheme && !video_data.drm.server
-      })
+      var is_WM = (typeof GM_startIntent === 'function')
+      var non_drm_video_data = null
 
-      if (non_drm_video_sources.length) {
-        process_video_data(
-          non_drm_video_sources[0]
-        )
+      for (var i=0; i < video_sources.length; i++) {
+        if (!video_sources[i].drm.scheme && !video_sources[i].drm.server) {
+          non_drm_video_data = video_sources[i]
+          break
+        }
       }
-      else {
+
+      if (!non_drm_video_data || (is_WM && !user_options.webmonkey.post_intent_redirect_to_url)) {
         state.video_sources = video_sources
         reinitialize_dom()
+      }
+
+      if (non_drm_video_data) {
+        process_video_data(non_drm_video_data)
       }
     })
   })
