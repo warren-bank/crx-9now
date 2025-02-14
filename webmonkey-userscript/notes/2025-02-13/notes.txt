@@ -1,0 +1,48 @@
+--------------------------------------------------------------------------------
+
+test video:
+===========
+
+https://www.9now.com.au/prodigal-son
+https://www.9now.com.au/prodigal-son/season-1
+https://www.9now.com.au/prodigal-son/season-1/episode-1
+
+--------------------------------------------------------------------------------
+
+https://apis.support.brightcove.com/playback/references/reference_v2.html#tag/Videos/operation/Get_Video_by_ID_or_Reference_ID
+https://edge.api.brightcove.com/playback/v1/accounts/{{account_id}}/videos/ref:{reference_id}
+
+view-source:https://www.9now.com.au/prodigal-son/season-1/episode-1
+  <script src="//players.brightcove.net/4460760524001/AQkgDJ7lH_default/index.min.js"></script>
+  \"referenceId\":\"cm1em76xi00000hqr2jamrkxh\"
+  \"accountId\":\"4460760524001\"
+
+https://players.brightcove.net/4460760524001/AQkgDJ7lH_default/index.min.js
+  {accountId:"4460760524001",policyKey:"BCpkADawqM17uNt4BA9TibECIvv8vBVypgHHIgThenKM55b88yzwUAmQ5hHbEfpsaQCimxMfcJglqzWqPTc21Mbnt4H-49t8_htP91BPml8bDw7AjWou9m_avlno4V7DBRsuLWdpLOoUMziK",allowPlayreadyInChromiumEdge:false}
+
+policy_key='BCpkADawqM17uNt4BA9TibECIvv8vBVypgHHIgThenKM55b88yzwUAmQ5hHbEfpsaQCimxMfcJglqzWqPTc21Mbnt4H-49t8_htP91BPml8bDw7AjWou9m_avlno4V7DBRsuLWdpLOoUMziK'
+account_id='4460760524001'
+reference_id='cm1em76xi00000hqr2jamrkxh'
+
+curl --insecure \
+  -H "Referer: https://www.9now.com.au/prodigal-son/season-1/episode-1" \
+  -H "BCOV-POLICY: ${policy_key}" \
+  "https://edge.api.brightcove.com/playback/v1/accounts/${account_id}/videos/ref:${reference_id}"
+
+--------------------------------------------------------------------------------
+
+test #1:
+========
+
+curl -s -o "./data/1_brightcove_api_response.txt" --insecure -H "Referer: https://www.9now.com.au/prodigal-son/season-1/episode-1" -H "BCOV-POLICY: BCpkADawqM17uNt4BA9TibECIvv8vBVypgHHIgThenKM55b88yzwUAmQ5hHbEfpsaQCimxMfcJglqzWqPTc21Mbnt4H-49t8_htP91BPml8bDw7AjWou9m_avlno4V7DBRsuLWdpLOoUMziK" "https://edge.api.brightcove.com/playback/v1/accounts/4460760524001/videos/ref:cm1em76xi00000hqr2jamrkxh"
+
+200 OK
+
+--------------------------------------------------------------------------------
+
+observations:
+=============
+
+* all stream sources require a DRM license key
+
+--------------------------------------------------------------------------------

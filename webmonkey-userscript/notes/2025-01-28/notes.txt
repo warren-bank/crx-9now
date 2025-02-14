@@ -58,7 +58,7 @@ curl --insecure \
 test #1:
 ========
 
-curl -s -o "./data/1_curl_response.txt" --insecure -H "Referer: https://www.9now.com.au/married-at-first-sight/season-10/episode-1" -H "BCOV-POLICY: BCpkADawqM17uNt4BA9TibECIvv8vBVypgHHIgThenKM55b88yzwUAmQ5hHbEfpsaQCimxMfcJglqzWqPTc21Mbnt4H-49t8_htP91BPml8bDw7AjWou9m_avlno4V7DBRsuLWdpLOoUMziK" "https://edge.api.brightcove.com/playback/v1/accounts/4460760524001/videos/ref:cldg88exe001s0jmi6htcr3bk"
+curl -s -o "./data/1_brightcove_api_response.txt" --insecure -H "Referer: https://www.9now.com.au/married-at-first-sight/season-10/episode-1" -H "BCOV-POLICY: BCpkADawqM17uNt4BA9TibECIvv8vBVypgHHIgThenKM55b88yzwUAmQ5hHbEfpsaQCimxMfcJglqzWqPTc21Mbnt4H-49t8_htP91BPml8bDw7AjWou9m_avlno4V7DBRsuLWdpLOoUMziK" "https://edge.api.brightcove.com/playback/v1/accounts/4460760524001/videos/ref:cldg88exe001s0jmi6htcr3bk"
 
 200 OK
 
