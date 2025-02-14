@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         9now
 // @description  Improve site usability. Watch videos in external player.
-// @version      2.0.0
+// @version      2.1.0
 // @include      /^https?:\/\/(?:[^\.\/]*\.)*9now\.com\.au\/.+\/episode-\d+(?:[#\?].*)?$/
 // @icon         https://www.9now.com.au/favicon.ico
 // @run-at       document-end
@@ -243,7 +243,7 @@ var get_webcast_reloaded_url = function(video_data, force_http, force_https) {
 
   webcast_reloaded_base = {
     "https": "https://warren-bank.github.io/crx-webcast-reloaded/external_website/index.html",
-    "http":  "http://webcast-reloaded.surge.sh/index.html"
+    "http":  "http://webcast-reloaded.frii.site/index.html"
   }
 
   webcast_reloaded_base = (force_http)
