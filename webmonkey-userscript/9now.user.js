@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         9now
 // @description  Improve site usability. Watch videos in external player.
-// @version      3.0.0
+// @version      3.1.0
 // @include      /^https?:\/\/(?:[^\.\/]*\.)*9now\.com\.au\/.+\/episode-\d+(?:[#\?].*)?$/
 // @match        *://*.9now.com.au/live/*
 // @icon         https://www.9now.com.au/favicon.ico
@@ -525,7 +525,7 @@ var download_livetv_guide = function(channelId, callback) {
         !livetv_data.data.getLXP || (typeof livetv_data.data.getLXP !== 'object') ||
         !livetv_data.data.getLXP.stream || (typeof livetv_data.data.getLXP.stream !== 'object') ||
         !livetv_data.data.getLXP.stream.video || (typeof livetv_data.data.getLXP.stream.video !== 'object') ||
-        !livetv_data.data.getLXP.stream.video.url ||
+        !(livetv_data.data.getLXP.stream.video.url || livetv_data.data.getLXP.stream.video.referenceId) ||
         !livetv_data.data.getLXP.stream.display || (typeof livetv_data.data.getLXP.stream.display !== 'object') ||
         !livetv_data.data.getLXP.stream.display.tagline
       ) return
@@ -535,17 +535,19 @@ var download_livetv_guide = function(channelId, callback) {
         summary: null
       }
 
-      var video_data = {
-        video_url:   livetv_data.data.getLXP.stream.video.url,
-        video_type:  ((livetv_data.data.getLXP.stream.video.streamType === 'hls') ? 'application/x-mpegurl' : 'application/dash+xml'),
-        caption_url: null,
-        referer_url: null,
-        drm: {
-          scheme:    null,
-          server:    null,
-          headers:   null
-        }
-      }
+      var video_data = !!livetv_data.data.getLXP.stream.video.url
+        ? {
+            video_url:   livetv_data.data.getLXP.stream.video.url,
+            video_type:  ((livetv_data.data.getLXP.stream.video.streamType === 'hls') ? 'application/x-mpegurl' : 'application/dash+xml'),
+            caption_url: null,
+            referer_url: null,
+            drm: {
+              scheme:    null,
+              server:    null,
+              headers:   null
+            }
+          }
+        : null
 
       state.current_livetv_channel = {
         id:         channelId,
@@ -586,7 +588,10 @@ var download_livetv_guide = function(channelId, callback) {
           })
       }
 
-      callback()
+      if (video_data)
+        callback()
+      else
+        download_current_livetv_channel_video_sources(livetv_data.data.getLXP.stream.video.referenceId, callback)
     }
   )
 }
@@ -617,92 +622,149 @@ var normalize_epg_data = function(epg_data) {
 
 // ----------------------------------------------------------------------------- API: download video sources
 
-var download_video_sources = function(callback) {
-  download_json(
-    /* url= */ 'https://edge.api.brightcove.com/playback/v1/accounts/' + state.account_id + '/videos/ref:' + state.episode.reference_id,
-    /* headers= */ {
-      "BCOV-POLICY": state.policy_key
-    },
-    /* data= */ null,
-    function($brightcove_data) {
-      if (!$brightcove_data || (typeof $brightcove_data !== 'object') || !Array.isArray($brightcove_data.sources) || !$brightcove_data.sources.length) return
-
-      $brightcove_data.sources = $brightcove_data.sources.filter(function(vidsrc) {
-        return !!(vidsrc && (typeof vidsrc === 'object') && vidsrc.src && vidsrc.type)
-      })
-      if (!$brightcove_data.sources.length) return
-
-      state.episode.title    = $brightcove_data.name || unsafeWindow.document.title || ''
-      state.episode.summary  = $brightcove_data.long_description || $brightcove_data.description || ''
-      state.episode.duration = $brightcove_data.duration ? convertSecondsToReadableString(Math.floor($brightcove_data.duration / 1000)) : 0
-
-      var caption_url
-
-      if (Array.isArray($brightcove_data.text_tracks) && $brightcove_data.text_tracks.length) {
-        $brightcove_data.text_tracks = $brightcove_data.text_tracks.filter(function(txtrack) {
-          return !!(txtrack && (typeof txtrack === 'object') && txtrack.src && (txtrack.kind === 'captions') && (txtrack.mime_type === 'text/webvtt'))
+var download_video_sources = function(reference_id, callback) {
+  obtain_brightcove_api_parameters(function() {
+    download_json(
+      /* url= */ 'https://edge.api.brightcove.com/playback/v1/accounts/' + state.account_id + '/videos/ref:' + reference_id,
+      /* headers= */ {
+        "BCOV-POLICY": state.policy_key
+      },
+      /* data= */ null,
+      function(api_media_data) {
+        normalize_api_media_data(api_media_data, function(video_sources) {
+          callback(video_sources, api_media_data)
         })
-
-        if ($brightcove_data.text_tracks.length) {
-          caption_url = $brightcove_data.text_tracks[0].src
-        }
       }
+    )
+  })
+}
 
-      var video_sources = []
-      var drm_schemes = ['widevine', 'clearkey', 'playready', 'fairplay']
-      var src, video_data, has_drm, drm_keys, drm_key, drm_data, drm_scheme
+var obtain_brightcove_api_parameters = function(callback) {
+  if (state.account_id && state.policy_key) {
+    callback()
+    return
+  }
 
-      for (var i=0; i < $brightcove_data.sources.length; i++) {
-        src = $brightcove_data.sources[i]
+  var $brightcove_script_src = null
+  var $brightcove_script, appConfig
 
-        video_data = {
-          video_url:   src.src,
-          video_type:  src.type,
-          caption_url: caption_url,
-          referer_url: null,
-          drm: {
-            scheme:    null,
-            server:    null,
-            headers:   null
-          }
-        }
-
-        has_drm = false
-
-        if (src.key_systems && (typeof src.key_systems === 'object')) {
-          drm_keys = Object.keys(src.key_systems)
-
-          if (drm_keys.length)
-            has_drm = true
-
-          for (var j=0; j < drm_keys.length; j++) {
-            drm_key  = drm_keys[j]
-            drm_data = src.key_systems[drm_key]
-
-            if (drm_data && (typeof drm_data === 'object') && drm_data.license_url) {
-              drm_scheme = resolve_drm_scheme(drm_schemes, drm_key)
-
-              if (drm_scheme) {
-                video_sources.push(
-                  Object.assign({}, video_data, {drm: {
-                    scheme:  drm_scheme,
-                    server:  drm_data.license_url,
-                    headers: null
-                  }})
-                )
-              }
-            }
-          }
-        }
-
-        if (!has_drm) {
-          video_sources.push(video_data)
-        }
-      }
-
-      callback(video_sources)
+  if (!$brightcove_script_src) {
+    $brightcove_script = unsafeWindow.document.querySelector('script[src*="players.brightcove.net"]')
+    if ($brightcove_script) {
+      $brightcove_script_src = $brightcove_script.src
     }
-  )
+  }
+
+  if (!$brightcove_script_src) {
+    try {
+      appConfig = unsafeWindow.document.querySelector('script#appConfig[type="application/json"]')
+      if (appConfig) {
+        appConfig = JSON.parse(appConfig.textContent)
+        $brightcove_script_src = 'https://players.brightcove.net/' + appConfig.webDedicatedPlayer.accountId + '/' + appConfig.webDedicatedPlayer.playerId + '_default/index.min.js'
+      }
+    }
+    catch(e) {}
+  }
+
+  if (!$brightcove_script_src) return
+
+  download_text($brightcove_script_src, null, null, function($brightcove_script_text) {
+    // contains: {accountId:"
+    // contains: ,policyKey:"
+
+    state.account_id = find_needle({
+      haystack: $brightcove_script_text,
+      needle:   '{name:"catalog",autoInit:true,options:{accountId:"',
+      tail:     '"',
+      strict:   true
+    })
+
+    state.policy_key = find_needle({
+      haystack: $brightcove_script_text,
+      needle:   ',policyKey:"',
+      tail:     '"',
+      strict:   true
+    })
+
+    if (state.account_id && state.policy_key) {
+      callback()
+    }
+  })
+}
+
+var normalize_api_media_data = function(api_media_data, callback) {
+  if (!api_media_data || (typeof api_media_data !== 'object') || !Array.isArray(api_media_data.sources) || !api_media_data.sources.length) return
+
+  api_media_data.sources = api_media_data.sources.filter(function(vidsrc) {
+    return !!(vidsrc && (typeof vidsrc === 'object') && vidsrc.src && vidsrc.type)
+  })
+  if (!api_media_data.sources.length) return
+
+  var caption_url
+
+  if (Array.isArray(api_media_data.text_tracks) && api_media_data.text_tracks.length) {
+    api_media_data.text_tracks = api_media_data.text_tracks.filter(function(txtrack) {
+      return !!(txtrack && (typeof txtrack === 'object') && txtrack.src && (txtrack.kind === 'captions') && (txtrack.mime_type === 'text/webvtt'))
+    })
+
+    if (api_media_data.text_tracks.length) {
+      caption_url = api_media_data.text_tracks[0].src
+    }
+  }
+
+  var video_sources = []
+  var drm_schemes = ['widevine', 'clearkey', 'playready', 'fairplay']
+  var src, video_data, has_drm, drm_keys, drm_key, drm_data, drm_scheme
+
+  for (var i=0; i < api_media_data.sources.length; i++) {
+    src = api_media_data.sources[i]
+
+    video_data = {
+      video_url:   src.src,
+      video_type:  src.type,
+      caption_url: caption_url,
+      referer_url: null,
+      drm: {
+        scheme:    null,
+        server:    null,
+        headers:   null
+      }
+    }
+
+    has_drm = false
+
+    if (src.key_systems && (typeof src.key_systems === 'object')) {
+      drm_keys = Object.keys(src.key_systems)
+
+      if (drm_keys.length)
+        has_drm = true
+
+      for (var j=0; j < drm_keys.length; j++) {
+        drm_key  = drm_keys[j]
+        drm_data = src.key_systems[drm_key]
+
+        if (drm_data && (typeof drm_data === 'object') && drm_data.license_url) {
+          drm_scheme = resolve_drm_scheme(drm_schemes, drm_key)
+
+          if (drm_scheme) {
+            video_sources.push(
+              Object.assign({}, video_data, {drm: {
+                scheme:  drm_scheme,
+                server:  drm_data.license_url,
+                headers: null
+              }})
+            )
+          }
+        }
+      }
+    }
+
+    if (!has_drm) {
+      video_sources.push(video_data)
+    }
+  }
+
+  callback(video_sources)
 }
 
 var resolve_drm_scheme = function(drm_schemes, drm_key) {
@@ -717,6 +779,29 @@ var resolve_drm_scheme = function(drm_schemes, drm_key) {
   }
 
   return null
+}
+
+// ----------------------------------------------------------------------------- API: download video sources for episode in series
+
+var download_episode_video_sources = function(callback) {
+  download_video_sources(state.episode.reference_id, function(video_sources, api_media_data) {
+    state.episode.title    = api_media_data.name || unsafeWindow.document.title || ''
+    state.episode.summary  = api_media_data.long_description || api_media_data.description || ''
+    state.episode.duration = api_media_data.duration ? convertSecondsToReadableString(Math.floor(api_media_data.duration / 1000)) : ''
+
+    callback(video_sources)
+  })
+}
+
+// ----------------------------------------------------------------------------- API: download video sources for current live tv channel
+
+var download_current_livetv_channel_video_sources = function(reference_id, callback) {
+  download_video_sources(reference_id, function(video_sources, api_media_data) {
+    if (Array.isArray(video_sources) && video_sources.length) {
+      state.current_livetv_channel.video_data = video_sources[0]
+      callback()
+    }
+  })
 }
 
 // ----------------------------------------------------------------------------- DOM: static skeleton
@@ -1324,10 +1409,6 @@ var page_init_livetv = function() {
 // ----------------------------------------------------------------------------- bootstrap: episode in series
 
 var page_init_shows = function() {
-  var $brightcove_script = unsafeWindow.document.querySelector('script[src*="players.brightcove.net"]')
-  if (!$brightcove_script) return
-  var $brightcove_script_src = $brightcove_script.src
-
   var $inline_scripts = unsafeWindow.document.querySelectorAll('script:not([src])')
   var $inline_script_text, needle, needle_index
   for (var i=0; i < $inline_scripts.length; i++) {
@@ -1342,54 +1423,32 @@ var page_init_shows = function() {
         tail:     '\\"',
         strict:   true
       })
-    }
 
-    if ($inline_script_text.indexOf('window.__config=') === 0) {
-      // contains: \"accountId\":\"
-
-      state.account_id = find_needle({
-        haystack: $inline_script_text,
-        needle:   '\\"accountId\\":\\"',
-        tail:     '\\"',
-        strict:   true
-      })
+      break
     }
   }
 
-  if (!state.episode.reference_id || !state.account_id) return
+  if (!state.episode.reference_id) return
 
-  download_text($brightcove_script_src, null, null, function($brightcove_script_text) {
-    // contains: ,policyKey:"
+  download_episode_video_sources(function(video_sources) {
+    var is_WM = (typeof GM_startIntent === 'function')
+    var non_drm_video_data = null
 
-    state.policy_key = find_needle({
-      haystack: $brightcove_script_text,
-      needle:   ',policyKey:"',
-      tail:     '"',
-      strict:   true
-    })
-
-    if (!state.policy_key) return
-
-    download_video_sources(function(video_sources) {
-      var is_WM = (typeof GM_startIntent === 'function')
-      var non_drm_video_data = null
-
-      for (var i=0; i < video_sources.length; i++) {
-        if (!video_sources[i].drm.scheme && !video_sources[i].drm.server) {
-          non_drm_video_data = video_sources[i]
-          break
-        }
+    for (var i=0; i < video_sources.length; i++) {
+      if (!video_sources[i].drm.scheme && !video_sources[i].drm.server) {
+        non_drm_video_data = video_sources[i]
+        break
       }
+    }
 
-      if (!non_drm_video_data || (is_WM && !user_options.webmonkey.post_intent_redirect_to_url)) {
-        state.video_sources = video_sources
-        reinitialize_dom()
-      }
+    if (!non_drm_video_data || (is_WM && !user_options.webmonkey.post_intent_redirect_to_url)) {
+      state.video_sources = video_sources
+      reinitialize_dom()
+    }
 
-      if (non_drm_video_data) {
-        process_video_data(non_drm_video_data)
-      }
-    })
+    if (non_drm_video_data) {
+      process_video_data(non_drm_video_data)
+    }
   })
 }
 

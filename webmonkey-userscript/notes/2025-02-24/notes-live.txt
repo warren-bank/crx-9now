@@ -225,4 +225,163 @@ notes:
   - referenceId = response.data.getLXP.stream.video.referenceId
                 = 'cm2tn1mj200090gl4boc0euil-ssai'
 
+complication:
+=============
+
+* /live/* pages don't include the script tag:
+    <script src="https://players.brightcove.net/4460760524001/AQkgDJ7lH_default/index.min.js"></script>
+
+* however, they do include the script tag:
+    <script id="appConfig" type="application/json">
+      {
+        "publicUrl": "https://www.9now.com.au",
+        "apiUrl": "https://api.9now.com.au",
+        "tvApiUrl": "https://tv-api.9now.com.au/v2",
+        "sso": {
+          "authUrl": "https://login.nine.com.au",
+          "clientId": "9now-web",
+          "settingsUrl": "https://settings.nine.com.au",
+          "tokenKey": "ssoToken",
+          "loginRequired": {
+            "live": true,
+            "clip": true,
+            "episode": true
+          },
+          "redirectUrl": "https://www.9now.com.au/callback"
+        },
+        "app": {
+          "name": "9Now",
+          "author": "Nine Network Australia Pty Ltd",
+          "ios": {
+            "appId": "542088539",
+            "storeLink": "https://itunes.apple.com/au/app/9jumpin/id542088539?mt=8",
+            "deepLinkBase": "https://9now.com.au",
+            "universalLinkBase": "https://9now.app.link/",
+            "smartBanner": true
+          },
+          "android": {
+            "appId": "au.com.mi9.jumpin.app",
+            "storeLink": "https://play.google.com/store/apps/details?id=au.com.mi9.jumpin.app",
+            "deepLinkBase": "https://9now.com.au",
+            "universalLinkBase": "https://9now.app.link/",
+            "smartBanner": false
+          }
+        },
+        "features": {
+          "cdnTokenisation": true
+        },
+        "tracking": {
+          "snowplow": {
+            "trackingUrl": "https://t.nineanalytics.io/"
+          },
+          "nuidCookieName": "NUID",
+          "googleTagManager": {
+            "containerId": "GTM-KVVC9PW"
+          }
+        },
+        "ads": {
+          "pauseAdDelay": 5000
+        },
+        "livePlayer": {
+          "accountId": "4460760524001",
+          "playerId": "e0XxaWglKW"
+        },
+        "webDedicatedPlayer": {
+          "accountId": "4460760524001",
+          "playerId": "AQkgDJ7lH"
+        },
+        "vodDedicatedPlayer": {
+          "accountId": "4460760524001",
+          "playerId": "IXCqaAWEb"
+        },
+        "mi9tracking": {
+          "google": {
+            "enabled": false
+          },
+          "sitePrefix": "9now_",
+          "nuidCookieName": "NUID",
+          "hierarchy": {
+            "site": null,
+            "section": "default",
+            "subsection": null
+          },
+          "enabledAbTests": [],
+          "omniture": {
+            "category": "9now_web",
+            "suiteId": "msnportalaucatglobal",
+            "trackFlashVersion": true,
+            "contentType": "",
+            "sso": null,
+            "cobrand": "none",
+            "clickTrackSitePrefix": "9n"
+          },
+          "microsoft": {
+            "category": "entertainment",
+            "categoryId": "4748",
+            "propertyId": "33480",
+            "propertySpecific": "10128",
+            "contentType": ""
+          },
+          "chartbeat": {
+            "enabled": true
+          },
+          "nielsen": {
+            "server": "secure-gl"
+          },
+          "nielsenVideoCensus": {
+            "vcid": "b08",
+            "censuscategory": "ninemsn Entertainment Videos"
+          },
+          "nielsenDigitalContentRatings": {
+            "enabled": true,
+            "apn": "9Now TV Web",
+            "sfcode": "dcr",
+            "apid": "PA1305FC6-10FC-4C8E-B0F6-699DCFC471F2",
+            "section": "9now - Brand only",
+            "nsdkv": "511",
+            "nol_sdkDebug": false
+          },
+          "nielsenPluginOptions": {
+            "apn": "9Now TV Web",
+            "sfcode": "dcr",
+            "apid": "PA1305FC6-10FC-4C8E-B0F6-699DCFC471F2",
+            "nsdkv": "511",
+            "nol_sdkDebug": false
+          },
+          "oztam": {
+            "url": "//deliver.oztam.com.au/api/meter",
+            "publisherId": "c78d4ca6-c33e-4f19-a5be-e0bb5b056db7",
+            "seekThreshold": 2,
+            "meterEventDispatchInterval": 60000,
+            "venderVersion": "9now_web_1",
+            "verboseLogging": false,
+            "useHttps": true
+          },
+          "snowplow": {
+            "enabled": false
+          },
+          "syncNuid": {
+            "hostDomain": "adc.9now.com.au"
+          },
+          "environment": {
+            "name": "prod",
+            "adcUrl": "adc.9now.com.au"
+          }
+        },
+        "user": {
+          "baseUrl": "https://user-api.9now.com.au/v1"
+        },
+        "env": "prod"
+      }
+    </script>
+
+* which can be used to derive the script URL:
+    var appConfig, $brightcove_script_src
+    try {
+      appConfig = document.querySelector('script#appConfig[type="application/json"]')
+      appConfig = JSON.parse(appConfig.textContent)
+      $brightcove_script_src = 'https://players.brightcove.net/' + appConfig.webDedicatedPlayer.accountId + '/' + appConfig.webDedicatedPlayer.playerId + '_default/index.min.js'
+    }
+    catch(e) {}
+
 --------------------------------------------------------------------------------
