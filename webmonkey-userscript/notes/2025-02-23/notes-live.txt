@@ -1,0 +1,1493 @@
+--------------------------------------------------------------------------------
+
+https://www.9now.com.au/live
+
+https://www.9now.com.au/live/channel-9
+https://www.9now.com.au/live/channel-9?startPlaying=true
+
+--------------------------------------------------------------------------------
+
+request:
+========
+
+curl 'https://api.9now.com.au/web/live-experience?device=web&slug=channel-9&streamParams=web%2Cfirefox%2Cwindows&region=nsw&offset=0' \
+  --compressed \
+  -H 'User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:109.0) Gecko/20100101 Firefox/115.0' \
+  -H 'Accept: */*' \
+  -H 'Accept-Language: en-US,en;q=0.5' \
+  -H 'Accept-Encoding: gzip, deflate, br' \
+  -H 'Referer: https://www.9now.com.au/' \
+  -H 'Origin: https://www.9now.com.au' \
+  -H 'DNT: 1' \
+  -H 'Connection: keep-alive' \
+  -H 'Sec-Fetch-Dest: empty' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Site: same-site' \
+  -H 'If-None-Match: W/"15752-ReJsy6h+fb5PaQDdhqHGcUftJSI"'
+
+response:
+=========
+
+{
+  "data": {
+    "getLXP": {
+      "market": {
+        "id": 1,
+        "name": "Sydney",
+        "regionId": 73,
+        "oztamPublisherId": "b0726746-500c-4cd6-bb5d-585f97caa0e8",
+        "createdAt": "2015-12-18T07:56:36.428Z",
+        "updatedAt": "2015-12-18T07:56:36.428Z",
+        "state": "nsw"
+      },
+      "region": {
+        "short": "nsw",
+        "fullName": "New South Wales"
+      },
+      "stream": {
+        "type": "channel",
+        "slug": "channel-9",
+        "display": {
+          "color": "#02C7E1",
+          "tagline": "Live now on Channel 9",
+          "offset": 0,
+          "promoImage": {
+            "sizes": {
+              "w320": "https://imageresizer.static9.net.au/3JirFN41k0RRs6W8Arg10jwpP-o=/320x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2018%2F10%2F182978%2F9_Card_Image.png",
+              "w480": "https://imageresizer.static9.net.au/uNANKmEn_ya9C6C3YGTyUWwyDqU=/480x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2018%2F10%2F182978%2F9_Card_Image.png",
+              "w768": "https://imageresizer.static9.net.au/CCbuZS20y2fP8SbQFrXAZaOGsiA=/768x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2018%2F10%2F182978%2F9_Card_Image.png",
+              "w1280": "https://imageresizer.static9.net.au/7_1ey3OIVKjLNWxfS22qT6TCTao=/1280x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2018%2F10%2F182978%2F9_Card_Image.png",
+              "w1920": "https://imageresizer.static9.net.au/kH7xXk6xdMppWbLiWcRwLurhSvs=/1920x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2018%2F10%2F182978%2F9_Card_Image.png"
+            },
+            "webpSizes": {
+              "w320": "https://imageresizer.static9.net.au/vSdWOF41eSQWJRXrIMYFeOVOxnk=/320x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2018%2F10%2F182978%2F9_Card_Image.png",
+              "w480": "https://imageresizer.static9.net.au/iwm_88nYVlQEshVKuozyT80T7jQ=/480x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2018%2F10%2F182978%2F9_Card_Image.png",
+              "w768": "https://imageresizer.static9.net.au/cqvOi5Xh8gso72kRclSvhGsnT34=/768x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2018%2F10%2F182978%2F9_Card_Image.png",
+              "w1280": "https://imageresizer.static9.net.au/sy10JPIt4BzZOJ4DsrU-5uwnVfE=/1280x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2018%2F10%2F182978%2F9_Card_Image.png",
+              "w1920": "https://imageresizer.static9.net.au/UzmPk7R-e3JDO7OT2Bil0wC_3-k=/1920x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2018%2F10%2F182978%2F9_Card_Image.png"
+            }
+          },
+          "ssoImage": {
+            "alt": "sso wall image",
+            "sizes": {
+              "w320": "https://imageresizer.static9.net.au/BDy6g7aR-k9p6Mb-v5zQjNQoemI=/320x0/https%3A%2F%2Fwww.9now.com.au%2FssoWall.jpg%3FexpireAt%3D2025-02-24T05%3A30%3A00.000Z",
+              "w480": "https://imageresizer.static9.net.au/hXsjGIxtVrFRzsSH_kDw5yD25dc=/480x0/https%3A%2F%2Fwww.9now.com.au%2FssoWall.jpg%3FexpireAt%3D2025-02-24T05%3A30%3A00.000Z",
+              "w768": "https://imageresizer.static9.net.au/I42YYTuSzEoS0TbMjkNJHBQNFO4=/768x0/https%3A%2F%2Fwww.9now.com.au%2FssoWall.jpg%3FexpireAt%3D2025-02-24T05%3A30%3A00.000Z",
+              "w1280": "https://imageresizer.static9.net.au/0T-l2yXJ4EmSpkM-K-lU-3VGQ3k=/1280x0/https%3A%2F%2Fwww.9now.com.au%2FssoWall.jpg%3FexpireAt%3D2025-02-24T05%3A30%3A00.000Z",
+              "w1920": "https://imageresizer.static9.net.au/Wyi6eig49WAfKYwu0DXGiwLpzA4=/1920x0/https%3A%2F%2Fwww.9now.com.au%2FssoWall.jpg%3FexpireAt%3D2025-02-24T05%3A30%3A00.000Z"
+            },
+            "webpSizes": {
+              "w320": "https://imageresizer.static9.net.au/rFCW1hz8qnwYlFRPSkZIZk9THjw=/320x0/filters:format(webp)/https%3A%2F%2Fwww.9now.com.au%2FssoWall.jpg%3FexpireAt%3D2025-02-24T05%3A30%3A00.000Z",
+              "w480": "https://imageresizer.static9.net.au/DmEFkc901DsxeChAX-b73pPbTv0=/480x0/filters:format(webp)/https%3A%2F%2Fwww.9now.com.au%2FssoWall.jpg%3FexpireAt%3D2025-02-24T05%3A30%3A00.000Z",
+              "w768": "https://imageresizer.static9.net.au/jO-xGgWSkoP2kFP6nOjeMx4jDZQ=/768x0/filters:format(webp)/https%3A%2F%2Fwww.9now.com.au%2FssoWall.jpg%3FexpireAt%3D2025-02-24T05%3A30%3A00.000Z",
+              "w1280": "https://imageresizer.static9.net.au/yn-au3fKdbv-rSZ_dh5Y9Nj4LW4=/1280x0/filters:format(webp)/https%3A%2F%2Fwww.9now.com.au%2FssoWall.jpg%3FexpireAt%3D2025-02-24T05%3A30%3A00.000Z",
+              "w1920": "https://imageresizer.static9.net.au/JnMZkWZi5D-sYpERMA06ie9mRGQ=/1920x0/filters:format(webp)/https%3A%2F%2Fwww.9now.com.au%2FssoWall.jpg%3FexpireAt%3D2025-02-24T05%3A30%3A00.000Z"
+            }
+          },
+          "listings": [{
+            "title": "9News Afternoon",
+            "subtitle": null,
+            "tvSeriesSlug": "9news-afternoon",
+            "description": "9News Afternoon, live and local with the latest news across Australia and around the world including sport, and weather.",
+            "classification": "NA",
+            "genreString": "News",
+            "hasStreamingRights": true,
+            "promoStartDate": null,
+            "startDate": "2025-02-24T05:00:26.373Z",
+            "endDate": "2025-02-24T05:57:00.000Z",
+            "programStartDate": null,
+            "programEndDate": null,
+            "secondaryListing": {
+              "title": "Tipping Point Australia",
+              "subTitle": null,
+              "tagline": "Up Next",
+              "startTime": "2025-02-24T05:57:00.000Z",
+              "endTime": "2025-02-24T06:59:00.000Z",
+              "programStartDate": null,
+              "programEndDate": null
+            }
+          }, {
+            "title": "Tipping Point Australia",
+            "subtitle": null,
+            "tvSeriesSlug": "tipping-point-australia",
+            "description": "Tipping Point Australia will push contestants' luck to the very edge. Three contestants will go head to head against the mesmerising machine with one lucky contestant playing for the Jackpot. Hosted by Todd Woodbridge.",
+            "classification": "PG",
+            "genreString": "Game Show",
+            "hasStreamingRights": true,
+            "promoStartDate": null,
+            "startDate": "2025-02-24T05:57:00.000Z",
+            "endDate": "2025-02-24T06:59:00.000Z",
+            "programStartDate": null,
+            "programEndDate": null,
+            "secondaryListing": {
+              "title": "9News",
+              "subTitle": null,
+              "tagline": "Up Next",
+              "startTime": "2025-02-24T06:59:00.000Z",
+              "endTime": "2025-02-24T08:00:00.000Z",
+              "programStartDate": null,
+              "programEndDate": null
+            }
+          }, {
+            "title": "9News",
+            "subtitle": null,
+            "tvSeriesSlug": "9news-sydney",
+            "description": "Join 9News for the latest in news and events that affect you in your local city, as well as news from across Australia and the world.",
+            "classification": "NA",
+            "genreString": "News",
+            "hasStreamingRights": true,
+            "promoStartDate": null,
+            "startDate": "2025-02-24T06:59:00.000Z",
+            "endDate": "2025-02-24T08:00:00.000Z",
+            "programStartDate": null,
+            "programEndDate": null,
+            "secondaryListing": {
+              "title": "A Current Affair",
+              "subTitle": null,
+              "tagline": "Up Next",
+              "startTime": "2025-02-24T08:00:00.000Z",
+              "endTime": "2025-02-24T08:31:00.000Z",
+              "programStartDate": null,
+              "programEndDate": null
+            }
+          }, {
+            "title": "A Current Affair",
+            "subtitle": null,
+            "tvSeriesSlug": "a-current-affair",
+            "description": "A Current Affair covers the realms of politics, crime, human rights, science, technology, celebrities and entertainment - all investigated by a dedicated team.",
+            "classification": "NA",
+            "genreString": "Current affairs",
+            "hasStreamingRights": true,
+            "promoStartDate": null,
+            "startDate": "2025-02-24T08:00:00.000Z",
+            "endDate": "2025-02-24T08:31:00.000Z",
+            "programStartDate": null,
+            "programEndDate": null,
+            "secondaryListing": {
+              "title": "Married At First Sight",
+              "subTitle": null,
+              "tagline": "Up Next",
+              "startTime": "2025-02-24T08:31:00.000Z",
+              "endTime": "2025-02-24T10:04:00.000Z",
+              "programStartDate": null,
+              "programEndDate": null
+            }
+          }, {
+            "title": "Married At First Sight",
+            "subtitle": null,
+            "tvSeriesSlug": "married-at-first-sight",
+            "description": "Meet the Family Week. When the couples' family and friends get together some relationships are strengthened while others are tested to the limit.",
+            "classification": "M",
+            "genreString": "Reality Drama",
+            "hasStreamingRights": true,
+            "promoStartDate": null,
+            "startDate": "2025-02-24T08:31:00.000Z",
+            "endDate": "2025-02-24T10:04:00.000Z",
+            "programStartDate": null,
+            "programEndDate": null,
+            "secondaryListing": {
+              "title": "Australian Crime Stories: The Investigators",
+              "subTitle": null,
+              "tagline": "Up Next",
+              "startTime": "2025-02-24T10:04:00.000Z",
+              "endTime": "2025-02-24T11:13:00.000Z",
+              "programStartDate": null,
+              "programEndDate": null
+            }
+          }, {
+            "title": "Australian Crime Stories: The Investigators",
+            "subtitle": null,
+            "tvSeriesSlug": "australian-crime-stories-the-investigators",
+            "description": "No body, no witnesses, no DNA, so how did Detective Dennis Bray solve the most notorious kidnapping in Australia's history? The Investigators gets the inside story of one of the most brilliant investigations in NSW history.",
+            "classification": "M",
+            "genreString": "Documentary",
+            "hasStreamingRights": true,
+            "promoStartDate": null,
+            "startDate": "2025-02-24T10:04:00.000Z",
+            "endDate": "2025-02-24T11:13:00.000Z",
+            "programStartDate": null,
+            "programEndDate": null,
+            "secondaryListing": {
+              "title": "The Life & Murder Of Nicole Brown Simpson",
+              "subTitle": null,
+              "tagline": "Up Next",
+              "startTime": "2025-02-24T11:13:00.000Z",
+              "endTime": "2025-02-24T12:15:00.000Z",
+              "programStartDate": null,
+              "programEndDate": null
+            }
+          }, {
+            "title": "The Life & Murder Of Nicole Brown Simpson",
+            "subtitle": null,
+            "tvSeriesSlug": "the-life-murder-of-nicole-brown-simpson",
+            "description": "18-year-old Nicole Brown meets 30-year-old superstar OJ Simpson, embarking on a whirlwind romance. While she maintains an exterior of the perfect housewife and mother, she privately suffers OJ's abuse and control.",
+            "classification": "M",
+            "genreString": "Crime",
+            "hasStreamingRights": true,
+            "promoStartDate": null,
+            "startDate": "2025-02-24T11:13:00.000Z",
+            "endDate": "2025-02-24T12:15:00.000Z",
+            "programStartDate": null,
+            "programEndDate": null,
+            "secondaryListing": {
+              "title": "9News Late",
+              "subTitle": null,
+              "tagline": "Up Next",
+              "startTime": "2025-02-24T12:15:00.000Z",
+              "endTime": "2025-02-24T12:41:00.000Z",
+              "programStartDate": null,
+              "programEndDate": null
+            }
+          }, {
+            "title": "9News Late",
+            "subtitle": null,
+            "tvSeriesSlug": "9news-late",
+            "description": "Join the 9News Late team for all of today's top stories from Australia and around the world.",
+            "classification": "NA",
+            "genreString": "News",
+            "hasStreamingRights": true,
+            "promoStartDate": null,
+            "startDate": "2025-02-24T12:15:00.000Z",
+            "endDate": "2025-02-24T12:41:00.000Z",
+            "programStartDate": null,
+            "programEndDate": null,
+            "secondaryListing": {
+              "title": "First On Scene",
+              "subTitle": null,
+              "tagline": "Up Next",
+              "startTime": "2025-02-24T12:41:00.000Z",
+              "endTime": "2025-02-24T13:06:00.000Z",
+              "programStartDate": null,
+              "programEndDate": null
+            }
+          }, {
+            "title": "First On Scene",
+            "subtitle": null,
+            "tvSeriesSlug": "first-on-scene",
+            "description": "Experience the raw moments captured by video journalists and hear the stories behind the headlines from those first on scene.",
+            "classification": "M",
+            "genreString": "Documentary",
+            "hasStreamingRights": true,
+            "promoStartDate": null,
+            "startDate": "2025-02-24T12:41:00.000Z",
+            "endDate": "2025-02-24T13:06:00.000Z",
+            "programStartDate": null,
+            "programEndDate": null,
+            "secondaryListing": {
+              "title": "Tipping Point",
+              "subTitle": null,
+              "tagline": "Up Next",
+              "startTime": "2025-02-24T13:06:00.000Z",
+              "endTime": "2025-02-24T14:07:00.000Z",
+              "programStartDate": null,
+              "programEndDate": null
+            }
+          }, {
+            "title": "Tipping Point",
+            "subtitle": null,
+            "tvSeriesSlug": "tipping-point",
+            "description": "Hosted by Ben Shepherd, three players are pit against a mesmerising machine. There are mystery prizes and a jaw-dropping jackpot up for grabs for any player with the skill and strategy to see off their human rivals and conquer the machine.",
+            "classification": "PG",
+            "genreString": "Game Show",
+            "hasStreamingRights": true,
+            "promoStartDate": null,
+            "startDate": "2025-02-24T13:06:00.000Z",
+            "endDate": "2025-02-24T14:07:00.000Z",
+            "programStartDate": null,
+            "programEndDate": null,
+            "secondaryListing": {
+              "title": null,
+              "subTitle": null,
+              "tagline": null,
+              "startTime": null,
+              "endTime": null,
+              "programStartDate": null,
+              "programEndDate": null
+            }
+          }],
+          "buttons": {
+            "startOverButton": {
+              "text": "Start Over",
+              "time": "2025-02-24T05:00:26.373Z",
+              "icon": null
+            },
+            "jumpToLiveButton": null,
+            "watchFromStartButton": null
+          }
+        },
+        "video": {
+          "referenceId": "live-ch9-syd-ssai",
+          "oztamPublisherId": "b0726746-500c-4cd6-bb5d-585f97caa0e8",
+          "ssai": {
+            "postfixParams": "pp=9now_live&iu=%2F133009657%2F9now%2Fweb%2Flive&yo.up=https&url=https://www.9now.com.au/live/channel-9&vid=live-ch9-syd&cmsid=2474123&yo.t.pf=8000&yo.ks=true&yo.pbr=false&yo.br=false&channel=channel-9&market=sydney&yo.eb.fb=aHR0cHM6Ly85bm93LWxpdmVzdHJlYW1zLmFrYW1haXplZC5uZXQvaGxzL2xpdmUvMjAwNzMzMC1iL2NoOS1zeWQvbWFzdGVyLm0zdTg=&startOver=false"
+          },
+          "drm": null,
+          "url": "https://csm-e-nineau1-eb.bln1.yospace.com/csm/extlive/nnaprd01,prod-simulcast-syd-ch9-hls-r21.m3u8?pp=9now_live&iu=%2F133009657%2F9now%2Fweb%2Flive&yo.up=https://prod-simulcast-syd-ch9.livestream-cdn.9vms.com.au/u/prod/simulcast/syd/ch9/hls/r1/&url=https://www.9now.com.au/live/channel-9&vid=live-ch9-syd&cmsid=2474123&yo.t.pf=8000&yo.ks=false&yo.pbr=false&yo.br=false&channel=channel-9&market=sydney&yo.eb.fb=aHR0cHM6Ly9wcm9kLXNpbXVsY2FzdC1zeWQtY2g5LmxpdmVzdHJlYW0tY2RuLjl2bXMuY29tLmF1L3UvcHJvZC9zaW11bGNhc3Qvc3lkL2NoOS9obHMvcjEvaW5kZXgubTN1OA==&startOver=false&yo.ap=https://livestream-cdn.9vms.com.au/",
+          "assetId": null,
+          "fallbackId": "true-false-true-false-hls",
+          "streamType": "hls",
+          "hasDrm": false,
+          "isDai": true,
+          "quality": "FHD",
+          "signpost": "Full HD"
+        }
+      },
+      "switcherRail": [{
+        "type": "channel",
+        "signpost": "Full HD",
+        "switcherLogo": {
+          "alt": "9nine-1.png",
+          "sizes": {
+            "w320": "https://imageresizer.static9.net.au/veiqgFW8eeQyLc3-E8AStwzzzac=/320x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F09%2F630608%2F9nine-1.png",
+            "w480": "https://imageresizer.static9.net.au/HBuZp_ugofuzpqflEexZu-F8H3M=/480x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F09%2F630608%2F9nine-1.png",
+            "w768": "https://imageresizer.static9.net.au/lx1XIWcrYZRtnfJOqvxNn9CshDI=/768x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F09%2F630608%2F9nine-1.png",
+            "w1280": "https://imageresizer.static9.net.au/Und7R5Wc7zhsstuafyqP2sIWhJs=/1280x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F09%2F630608%2F9nine-1.png",
+            "w1920": "https://imageresizer.static9.net.au/gVmmZX96uyIB3EgSBY2JkMB_EcE=/1920x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F09%2F630608%2F9nine-1.png"
+          },
+          "webpSizes": {
+            "w320": "https://imageresizer.static9.net.au/Lj1rAO-FVPN1EbXWEU_K0YxPra4=/320x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F09%2F630608%2F9nine-1.png",
+            "w480": "https://imageresizer.static9.net.au/uusmWadkrHnBXvUNzRFsf0_xWWw=/480x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F09%2F630608%2F9nine-1.png",
+            "w768": "https://imageresizer.static9.net.au/Qir7dcP4bQiQqYIH9ipGB7LQ_Zw=/768x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F09%2F630608%2F9nine-1.png",
+            "w1280": "https://imageresizer.static9.net.au/sNAG04PWeV01sTM4cThVbY6EC3Q=/1280x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F09%2F630608%2F9nine-1.png",
+            "w1920": "https://imageresizer.static9.net.au/eRjbUd1klOI4RU6dzDahz-Wz4nA=/1920x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F09%2F630608%2F9nine-1.png"
+          }
+        },
+        "id": 1,
+        "slug": "channel-9",
+        "name": "Channel 9",
+        "color": "#02C7E1",
+        "quality": "FHD",
+        "selected": true,
+        "airings": [{
+          "title": "9News Afternoon",
+          "startDate": "2025-02-24T05:00:26.373Z",
+          "endDate": "2025-02-24T05:57:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "Tipping Point Australia",
+          "startDate": "2025-02-24T05:57:00.000Z",
+          "endDate": "2025-02-24T06:59:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "9News",
+          "startDate": "2025-02-24T06:59:00.000Z",
+          "endDate": "2025-02-24T08:00:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "A Current Affair",
+          "startDate": "2025-02-24T08:00:00.000Z",
+          "endDate": "2025-02-24T08:31:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "Married At First Sight",
+          "startDate": "2025-02-24T08:31:00.000Z",
+          "endDate": "2025-02-24T10:04:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "Australian Crime Stories: The Investigators",
+          "startDate": "2025-02-24T10:04:00.000Z",
+          "endDate": "2025-02-24T11:13:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "The Life & Murder Of Nicole Brown Simpson",
+          "startDate": "2025-02-24T11:13:00.000Z",
+          "endDate": "2025-02-24T12:15:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "9News Late",
+          "startDate": "2025-02-24T12:15:00.000Z",
+          "endDate": "2025-02-24T12:41:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "First On Scene",
+          "startDate": "2025-02-24T12:41:00.000Z",
+          "endDate": "2025-02-24T13:06:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "Tipping Point",
+          "startDate": "2025-02-24T13:06:00.000Z",
+          "endDate": "2025-02-24T14:07:00.000Z",
+          "hasStreamingRights": true
+        }]
+      }, {
+        "type": "channel",
+        "signpost": "Full HD",
+        "switcherLogo": {
+          "alt": "9gem-1.png",
+          "sizes": {
+            "w320": "https://imageresizer.static9.net.au/hnh1-w13AS9bafYoTbmfNWvkq_8=/320x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F08%2F620929%2F9gem-1.png",
+            "w480": "https://imageresizer.static9.net.au/CG-HcdaSUalWD4zIlmoZOLTJHk4=/480x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F08%2F620929%2F9gem-1.png",
+            "w768": "https://imageresizer.static9.net.au/d00389KKc5T4o5isRaDE9Pl9DWk=/768x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F08%2F620929%2F9gem-1.png",
+            "w1280": "https://imageresizer.static9.net.au/bm18b_QlD4Ehe26UrDaW3TiMdlc=/1280x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F08%2F620929%2F9gem-1.png",
+            "w1920": "https://imageresizer.static9.net.au/GowOLIVZGJZXeV2EZRNFzN_supc=/1920x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F08%2F620929%2F9gem-1.png"
+          },
+          "webpSizes": {
+            "w320": "https://imageresizer.static9.net.au/SXuobVaTmxVcNa5RfNjHr-4YMvc=/320x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F08%2F620929%2F9gem-1.png",
+            "w480": "https://imageresizer.static9.net.au/OArZh1G8KZxbEChkvh4ew9gsGoQ=/480x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F08%2F620929%2F9gem-1.png",
+            "w768": "https://imageresizer.static9.net.au/TLxzLDZhzQR5cnayJyVUxiNWDrY=/768x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F08%2F620929%2F9gem-1.png",
+            "w1280": "https://imageresizer.static9.net.au/J59w7PldLXOFwfRfFxv2b4VF5RM=/1280x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F08%2F620929%2F9gem-1.png",
+            "w1920": "https://imageresizer.static9.net.au/RHR_nh63Pf62d-I11GXC5a2Ni3k=/1920x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F08%2F620929%2F9gem-1.png"
+          }
+        },
+        "id": 11,
+        "slug": "gem",
+        "name": "9Gem",
+        "color": "#02C7E1",
+        "quality": "FHD",
+        "selected": false,
+        "airings": [{
+          "title": "The Angry Silence (1960)",
+          "startDate": "2025-02-24T04:27:21.966Z",
+          "endDate": "2025-02-24T06:29:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "Our Yorkshire Farm",
+          "startDate": "2025-02-24T06:29:00.000Z",
+          "endDate": "2025-02-24T07:30:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "Antiques Roadshow",
+          "startDate": "2025-02-24T07:30:00.000Z",
+          "endDate": "2025-02-24T08:30:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "Death In Paradise",
+          "startDate": "2025-02-24T08:30:00.000Z",
+          "endDate": "2025-02-24T09:38:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "The Good Karma Hospital",
+          "startDate": "2025-02-24T09:38:00.000Z",
+          "endDate": "2025-02-24T10:39:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "The Madame Blanc Mysteries",
+          "startDate": "2025-02-24T10:39:00.000Z",
+          "endDate": "2025-02-24T11:38:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "The Closer",
+          "startDate": "2025-02-24T11:38:00.000Z",
+          "endDate": "2025-02-24T12:38:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "Only Fools And Horses",
+          "startDate": "2025-02-24T12:38:00.000Z",
+          "endDate": "2025-02-24T13:17:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "Antiques Roadshow",
+          "startDate": "2025-02-24T13:17:00.000Z",
+          "endDate": "2025-02-24T13:48:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "Explore",
+          "startDate": "2025-02-24T13:48:00.000Z",
+          "endDate": "2025-02-24T13:56:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "Creflo Dollar Ministries",
+          "startDate": "2025-02-24T13:56:00.000Z",
+          "endDate": "2025-02-24T14:25:00.000Z",
+          "hasStreamingRights": true
+        }]
+      }, {
+        "type": "channel",
+        "signpost": "Full HD",
+        "switcherLogo": {
+          "alt": "9go.png",
+          "sizes": {
+            "w320": "https://imageresizer.static9.net.au/O6fU6HAOjw2ZvnGx8Vy11Pku5E4=/320x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F03%2F574470%2F9go.png",
+            "w480": "https://imageresizer.static9.net.au/fdubYk71qyAbJXwXOmwo2LCvQVM=/480x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F03%2F574470%2F9go.png",
+            "w768": "https://imageresizer.static9.net.au/fcTwzkAJT4q81emfp2kYkgoxlDA=/768x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F03%2F574470%2F9go.png",
+            "w1280": "https://imageresizer.static9.net.au/yaIPzD6BPRyRgnEm9r2Jwg4ktGA=/1280x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F03%2F574470%2F9go.png",
+            "w1920": "https://imageresizer.static9.net.au/iyjMGr9jCQGoIHGl6Vuwzn6Dnp4=/1920x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F03%2F574470%2F9go.png"
+          },
+          "webpSizes": {
+            "w320": "https://imageresizer.static9.net.au/UGkGAICa6IFTndABwf6nzpigBjU=/320x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F03%2F574470%2F9go.png",
+            "w480": "https://imageresizer.static9.net.au/AzWFoZ-tNl1YX3nBrMnOoik5ySw=/480x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F03%2F574470%2F9go.png",
+            "w768": "https://imageresizer.static9.net.au/ILBin1AO7L5NCToc5z6dsf_GYXg=/768x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F03%2F574470%2F9go.png",
+            "w1280": "https://imageresizer.static9.net.au/exd9ELSM3XUqsTQx9q3gtTL6kzs=/1280x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F03%2F574470%2F9go.png",
+            "w1920": "https://imageresizer.static9.net.au/Se7u0XIKYBgU_TP8cN47cI3lTE4=/1920x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F03%2F574470%2F9go.png"
+          }
+        },
+        "id": 6,
+        "slug": "go",
+        "name": "9Go!",
+        "color": "#02C7E1",
+        "quality": "FHD",
+        "selected": false,
+        "airings": [{
+          "title": "The Nanny",
+          "startDate": "2025-02-24T04:57:17.252Z",
+          "endDate": "2025-02-24T05:26:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "The Addams Family",
+          "startDate": "2025-02-24T05:26:00.000Z",
+          "endDate": "2025-02-24T05:57:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "Bewitched",
+          "startDate": "2025-02-24T05:57:00.000Z",
+          "endDate": "2025-02-24T06:28:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "I Dream of Jeannie",
+          "startDate": "2025-02-24T06:28:00.000Z",
+          "endDate": "2025-02-24T06:59:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "The Golden Girls",
+          "startDate": "2025-02-24T06:59:00.000Z",
+          "endDate": "2025-02-24T07:30:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "The Nanny",
+          "startDate": "2025-02-24T07:30:00.000Z",
+          "endDate": "2025-02-24T08:01:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "The Nanny",
+          "startDate": "2025-02-24T08:01:00.000Z",
+          "endDate": "2025-02-24T08:31:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "Seinfeld",
+          "startDate": "2025-02-24T08:31:00.000Z",
+          "endDate": "2025-02-24T09:02:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "Seinfeld",
+          "startDate": "2025-02-24T09:02:00.000Z",
+          "endDate": "2025-02-24T09:32:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "King Arthur: Legend Of The Sword (2017)",
+          "startDate": "2025-02-24T09:32:00.000Z",
+          "endDate": "2025-02-24T12:05:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "Seinfeld",
+          "startDate": "2025-02-24T12:05:00.000Z",
+          "endDate": "2025-02-24T12:35:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "Seinfeld",
+          "startDate": "2025-02-24T12:35:00.000Z",
+          "endDate": "2025-02-24T13:05:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "The Nanny",
+          "startDate": "2025-02-24T13:05:00.000Z",
+          "endDate": "2025-02-24T13:33:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "The Nanny",
+          "startDate": "2025-02-24T13:33:00.000Z",
+          "endDate": "2025-02-24T14:01:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "Bewitched",
+          "startDate": "2025-02-24T14:01:00.000Z",
+          "endDate": "2025-02-24T14:31:00.000Z",
+          "hasStreamingRights": true
+        }]
+      }, {
+        "type": "channel",
+        "signpost": "Full HD",
+        "switcherLogo": {
+          "alt": "9life.png",
+          "sizes": {
+            "w320": "https://imageresizer.static9.net.au/uWgG7eS_SLXnI--dsEqklG0zhQk=/320x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F03%2F574472%2F9life.png",
+            "w480": "https://imageresizer.static9.net.au/iD7rivdQR4x9AobX95eXHVU1nKU=/480x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F03%2F574472%2F9life.png",
+            "w768": "https://imageresizer.static9.net.au/wMK3kBDybfEoN2iqyDDflC91D1U=/768x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F03%2F574472%2F9life.png",
+            "w1280": "https://imageresizer.static9.net.au/C4w0YBdcsztIvg7iioB6H1Olpx0=/1280x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F03%2F574472%2F9life.png",
+            "w1920": "https://imageresizer.static9.net.au/h0oXvv8krozwbQyzDUDQ9yvqKPI=/1920x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F03%2F574472%2F9life.png"
+          },
+          "webpSizes": {
+            "w320": "https://imageresizer.static9.net.au/HL5Sss9VG8xZI4V6DZX4k6TehNg=/320x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F03%2F574472%2F9life.png",
+            "w480": "https://imageresizer.static9.net.au/gR5Fhw-6X_dHPOZY6nZgt1QXFdw=/480x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F03%2F574472%2F9life.png",
+            "w768": "https://imageresizer.static9.net.au/KtoC3TKX4GXLtktICn5440ZU44c=/768x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F03%2F574472%2F9life.png",
+            "w1280": "https://imageresizer.static9.net.au/5poffPo8ax06cVh8VXBgFqfzXvs=/1280x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F03%2F574472%2F9life.png",
+            "w1920": "https://imageresizer.static9.net.au/6C2ReG6Wi7jwqGWOnfddmSdXFfY=/1920x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F03%2F574472%2F9life.png"
+          }
+        },
+        "id": 16,
+        "slug": "life",
+        "name": "9Life",
+        "color": "#02C7E1",
+        "quality": "FHD",
+        "selected": false,
+        "airings": [{
+          "title": "Reno My Rental",
+          "startDate": "2025-02-24T05:00:40.143Z",
+          "endDate": "2025-02-24T05:29:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "9honey - He Said, She Said",
+          "startDate": "2025-02-24T05:29:00.000Z",
+          "endDate": "2025-02-24T05:34:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "Frozen In Time",
+          "startDate": "2025-02-24T05:34:00.000Z",
+          "endDate": "2025-02-24T06:04:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "Zombie House Flipping",
+          "startDate": "2025-02-24T06:04:00.000Z",
+          "endDate": "2025-02-24T07:02:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "House Hunters International",
+          "startDate": "2025-02-24T07:02:00.000Z",
+          "endDate": "2025-02-24T07:32:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "House Hunters",
+          "startDate": "2025-02-24T07:32:00.000Z",
+          "endDate": "2025-02-24T08:02:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "House Hunters",
+          "startDate": "2025-02-24T08:02:00.000Z",
+          "endDate": "2025-02-24T08:32:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "House Hunters International",
+          "startDate": "2025-02-24T08:32:00.000Z",
+          "endDate": "2025-02-24T09:02:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "House Hunters International",
+          "startDate": "2025-02-24T09:02:00.000Z",
+          "endDate": "2025-02-24T09:32:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "Backed By The Bros",
+          "startDate": "2025-02-24T09:32:00.000Z",
+          "endDate": "2025-02-24T10:32:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "Bargain Mansions",
+          "startDate": "2025-02-24T10:32:00.000Z",
+          "endDate": "2025-02-24T11:31:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "Bargain Mansions",
+          "startDate": "2025-02-24T11:31:00.000Z",
+          "endDate": "2025-02-24T12:00:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "Bargain Mansions",
+          "startDate": "2025-02-24T12:00:00.000Z",
+          "endDate": "2025-02-24T12:30:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "House Hunters International",
+          "startDate": "2025-02-24T12:30:00.000Z",
+          "endDate": "2025-02-24T13:00:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "House Hunters",
+          "startDate": "2025-02-24T13:00:00.000Z",
+          "endDate": "2025-02-24T13:31:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "House Hunters",
+          "startDate": "2025-02-24T13:31:00.000Z",
+          "endDate": "2025-02-24T14:01:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "Backed By The Bros",
+          "startDate": "2025-02-24T14:01:00.000Z",
+          "endDate": "2025-02-24T15:00:00.000Z",
+          "hasStreamingRights": true
+        }]
+      }, {
+        "type": "channel",
+        "signpost": "Full HD",
+        "switcherLogo": {
+          "alt": "9rush.png",
+          "sizes": {
+            "w320": "https://imageresizer.static9.net.au/_wLDDzSGPvokSni96K-NBC-vVr8=/320x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F03%2F574473%2F9rush.png",
+            "w480": "https://imageresizer.static9.net.au/9Ayl0IvGrur22TgsRksu-9db104=/480x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F03%2F574473%2F9rush.png",
+            "w768": "https://imageresizer.static9.net.au/5B2ZDlD8Ji6dCecGQEfwy2U2m4Y=/768x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F03%2F574473%2F9rush.png",
+            "w1280": "https://imageresizer.static9.net.au/oVyk8e_dRi45tHmPn5LUNaTHecg=/1280x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F03%2F574473%2F9rush.png",
+            "w1920": "https://imageresizer.static9.net.au/Q5JllhXHZ0HRf7uCNIvxF18XF8s=/1920x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F03%2F574473%2F9rush.png"
+          },
+          "webpSizes": {
+            "w320": "https://imageresizer.static9.net.au/CZiLtqV9sQg8VGzDEOiqqtvI1js=/320x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F03%2F574473%2F9rush.png",
+            "w480": "https://imageresizer.static9.net.au/8AkWbgNjrDzF2FIYDImt_38_DnQ=/480x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F03%2F574473%2F9rush.png",
+            "w768": "https://imageresizer.static9.net.au/mleiuMx2zqGOHyjMR4JoW4filc0=/768x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F03%2F574473%2F9rush.png",
+            "w1280": "https://imageresizer.static9.net.au/1FZ4kjQFZpS8aKZcE1eVIeECAOk=/1280x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F03%2F574473%2F9rush.png",
+            "w1920": "https://imageresizer.static9.net.au/c2hCxc8m3yIWNjxUF0iETpgQNdA=/1920x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F03%2F574473%2F9rush.png"
+          }
+        },
+        "id": 21,
+        "slug": "rush",
+        "name": "9Rush",
+        "color": "#02C7E1",
+        "quality": "FHD",
+        "selected": false,
+        "airings": [{
+          "title": "Drive TV",
+          "startDate": "2025-02-24T04:59:25.740Z",
+          "endDate": "2025-02-24T05:28:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "Explore",
+          "startDate": "2025-02-24T05:28:00.000Z",
+          "endDate": "2025-02-24T05:34:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "Salvage Hunters",
+          "startDate": "2025-02-24T05:34:00.000Z",
+          "endDate": "2025-02-24T06:34:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "Tanked",
+          "startDate": "2025-02-24T06:34:00.000Z",
+          "endDate": "2025-02-24T07:32:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "Wheeler Dealers",
+          "startDate": "2025-02-24T07:32:00.000Z",
+          "endDate": "2025-02-24T08:31:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "Bering Sea Gold",
+          "startDate": "2025-02-24T08:31:00.000Z",
+          "endDate": "2025-02-24T09:31:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "Aussie Gold Hunters: Mine Sos",
+          "startDate": "2025-02-24T09:31:00.000Z",
+          "endDate": "2025-02-24T10:30:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "Gold Rush: White Water",
+          "startDate": "2025-02-24T10:30:00.000Z",
+          "endDate": "2025-02-24T11:34:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "Gold Rush: Dave Turin's Lost Mine",
+          "startDate": "2025-02-24T11:34:00.000Z",
+          "endDate": "2025-02-24T12:31:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "Bering Sea Gold",
+          "startDate": "2025-02-24T12:31:00.000Z",
+          "endDate": "2025-02-24T13:31:00.000Z",
+          "hasStreamingRights": true
+        }, {
+          "title": "Aussie Gold Hunters: Mine Sos",
+          "startDate": "2025-02-24T13:31:00.000Z",
+          "endDate": "2025-02-24T14:30:00.000Z",
+          "hasStreamingRights": true
+        }]
+      }, {
+        "type": "live-event-group",
+        "signpost": null,
+        "switcherLogo": {
+          "alt": "BBC Top Gear",
+          "sizes": {
+            "w320": "https://imageresizer.static9.net.au/gGo0mDrI-6-HT5sp7CNRYEdrdeE=/320x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F648316%2Fgroup-61773.png",
+            "w480": "https://imageresizer.static9.net.au/NsUIL2cgZeOuEJhRvmQAKro1HyE=/480x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F648316%2Fgroup-61773.png",
+            "w768": "https://imageresizer.static9.net.au/anIncnAgaLBmeroZtHqBIXHpW6c=/768x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F648316%2Fgroup-61773.png",
+            "w1280": "https://imageresizer.static9.net.au/ec3mwy-bdj3323LiyR08qJmSIEo=/1280x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F648316%2Fgroup-61773.png",
+            "w1920": "https://imageresizer.static9.net.au/0K1i6xrdzTo1B_Lrv6TbjgWkr7I=/1920x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F648316%2Fgroup-61773.png"
+          },
+          "webpSizes": {
+            "w320": "https://imageresizer.static9.net.au/o0rXQrFyg49KULksNLmXV8HdLNM=/320x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F648316%2Fgroup-61773.png",
+            "w480": "https://imageresizer.static9.net.au/dPVT572aau9xz1sSOLCIBpGlk78=/480x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F648316%2Fgroup-61773.png",
+            "w768": "https://imageresizer.static9.net.au/B2UvikEEWWA7Tt88UoBqmRQHMZI=/768x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F648316%2Fgroup-61773.png",
+            "w1280": "https://imageresizer.static9.net.au/Cq71oymKCQaSDw5-m2YKbFofjaI=/1280x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F648316%2Fgroup-61773.png",
+            "w1920": "https://imageresizer.static9.net.au/SUFAtdVBeFOOrg2_0f2hEZfnKAw=/1920x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F648316%2Fgroup-61773.png"
+          }
+        },
+        "id": 583,
+        "color": "#02C7E1",
+        "name": "BBC Top Gear",
+        "eventCount": "1",
+        "slug": "bbc-top-gear-247",
+        "selected": false,
+        "isChannelGroup": true,
+        "currentProgramName": "Top Gear UK",
+        "programStartDate": "2025-02-24T04:13:20.000Z",
+        "programEndDate": "2025-02-24T05:11:57.000Z",
+        "groupStartTime": "2024-10-21T13:00:00.000Z",
+        "groupEndTime": "2026-11-30T12:59:00.000Z",
+        "seoTitle": "",
+        "seoDescription": ""
+      }, {
+        "type": "live-event-group",
+        "signpost": null,
+        "switcherLogo": {
+          "alt": "BBC Comedy",
+          "sizes": {
+            "w320": "https://imageresizer.static9.net.au/gQIB3fuY5YxIK218dYfzbGpFS_I=/320x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F648314%2Fgroup-61772.png",
+            "w480": "https://imageresizer.static9.net.au/clXL95sS8bq1XCNREEBGn4sCOAM=/480x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F648314%2Fgroup-61772.png",
+            "w768": "https://imageresizer.static9.net.au/2bl6ZyviwjpHCeVoXf8twpEVFjo=/768x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F648314%2Fgroup-61772.png",
+            "w1280": "https://imageresizer.static9.net.au/8Pz-wh8MWW0VrlB8D7pvXURBu9A=/1280x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F648314%2Fgroup-61772.png",
+            "w1920": "https://imageresizer.static9.net.au/BODKv1b32hpqZndWk-98aNwmXQU=/1920x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F648314%2Fgroup-61772.png"
+          },
+          "webpSizes": {
+            "w320": "https://imageresizer.static9.net.au/cFAjPuOiF9sE4dAL-ghqy8dX3Ng=/320x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F648314%2Fgroup-61772.png",
+            "w480": "https://imageresizer.static9.net.au/Q9KJD2uX7tSBmKQDNZTUpZQTWGg=/480x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F648314%2Fgroup-61772.png",
+            "w768": "https://imageresizer.static9.net.au/HlqDllTiJTIRZAtRmYs07uy9V1I=/768x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F648314%2Fgroup-61772.png",
+            "w1280": "https://imageresizer.static9.net.au/QUj3BkvL-MMc8WqA1NHjXk-jKY4=/1280x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F648314%2Fgroup-61772.png",
+            "w1920": "https://imageresizer.static9.net.au/svfAToSOKdkf_Y00_Tr6HDppH_s=/1920x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F648314%2Fgroup-61772.png"
+          }
+        },
+        "id": 586,
+        "color": "#02C7E1",
+        "name": "BBC Comedy",
+        "eventCount": "1",
+        "slug": "bbc-comedy",
+        "selected": false,
+        "isChannelGroup": true,
+        "currentProgramName": "A Bit of Fry and Laurie",
+        "programStartDate": "2025-02-24T04:51:20.000Z",
+        "programEndDate": "2025-02-24T05:23:50.000Z",
+        "groupStartTime": "2024-10-28T13:00:00.000Z",
+        "groupEndTime": "2026-11-30T12:59:00.000Z",
+        "seoTitle": "",
+        "seoDescription": ""
+      }, {
+        "type": "live-event-group",
+        "signpost": null,
+        "switcherLogo": {
+          "alt": "BBC Food",
+          "sizes": {
+            "w320": "https://imageresizer.static9.net.au/cyirIix_bJq0EyaZvmqSmBouldY=/320x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F12%2F652517%2Fgroup-61812.png",
+            "w480": "https://imageresizer.static9.net.au/NPr1htqNlzy_bLxLFz4ML622bdk=/480x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F12%2F652517%2Fgroup-61812.png",
+            "w768": "https://imageresizer.static9.net.au/fsW8mo_8BA8nztvHgpodxtSmcjo=/768x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F12%2F652517%2Fgroup-61812.png",
+            "w1280": "https://imageresizer.static9.net.au/JAuyRvA1UJjoR1kQ6fRon7Pv1gE=/1280x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F12%2F652517%2Fgroup-61812.png",
+            "w1920": "https://imageresizer.static9.net.au/5qi9gx219CRPsz4LKWX5d2kWPOE=/1920x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F12%2F652517%2Fgroup-61812.png"
+          },
+          "webpSizes": {
+            "w320": "https://imageresizer.static9.net.au/bEnBGrOXrw8SpELCIjX80lMEIdw=/320x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F12%2F652517%2Fgroup-61812.png",
+            "w480": "https://imageresizer.static9.net.au/smi-BrwuRmZH_z-8Ik7aLU4hwYE=/480x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F12%2F652517%2Fgroup-61812.png",
+            "w768": "https://imageresizer.static9.net.au/vxmVIpU5GfCmSZrupdAo0AlX_fY=/768x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F12%2F652517%2Fgroup-61812.png",
+            "w1280": "https://imageresizer.static9.net.au/9tYmKHewttVvkBWWx16mXwpyiwk=/1280x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F12%2F652517%2Fgroup-61812.png",
+            "w1920": "https://imageresizer.static9.net.au/fKSEeQeDTJP6KaEYCR3iGn9MOnw=/1920x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F12%2F652517%2Fgroup-61812.png"
+          }
+        },
+        "id": 588,
+        "color": "#02C7E1",
+        "name": "BBC Food",
+        "eventCount": "1",
+        "slug": "bbc-food",
+        "selected": false,
+        "isChannelGroup": true,
+        "currentProgramName": "Hungry for It",
+        "programStartDate": "2025-02-24T04:00:01.000Z",
+        "programEndDate": "2025-02-24T05:02:15.000Z",
+        "groupStartTime": "2024-10-20T13:00:00.000Z",
+        "groupEndTime": "2026-11-30T12:59:00.000Z",
+        "seoTitle": "",
+        "seoDescription": ""
+      }, {
+        "type": "live-event-group",
+        "signpost": null,
+        "switcherLogo": {
+          "alt": "LMN",
+          "sizes": {
+            "w320": "https://imageresizer.static9.net.au/DTAkJPyPeDUqxyrUCcrxbfQy_2M=/320x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F12%2F658518%2Fgroup-61484.png",
+            "w480": "https://imageresizer.static9.net.au/x8vs8D9emOSNdt1S__Zx6hljrKc=/480x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F12%2F658518%2Fgroup-61484.png",
+            "w768": "https://imageresizer.static9.net.au/GfA3WNoMOfZbJOqJeq-UrX5nsdk=/768x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F12%2F658518%2Fgroup-61484.png",
+            "w1280": "https://imageresizer.static9.net.au/ivpCGOMBmBlfDBTTrzzfVjvi_tI=/1280x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F12%2F658518%2Fgroup-61484.png",
+            "w1920": "https://imageresizer.static9.net.au/m3M-XDd4McOWlOlyK9aY6w3derQ=/1920x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F12%2F658518%2Fgroup-61484.png"
+          },
+          "webpSizes": {
+            "w320": "https://imageresizer.static9.net.au/swWayYqYJFDAvr4rCWC5DbQt89A=/320x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F12%2F658518%2Fgroup-61484.png",
+            "w480": "https://imageresizer.static9.net.au/-N-tTXk68RSHkbaW0D7meTKYwqM=/480x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F12%2F658518%2Fgroup-61484.png",
+            "w768": "https://imageresizer.static9.net.au/sL-pjfQZKS23Ej2N-haAdUbkhL0=/768x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F12%2F658518%2Fgroup-61484.png",
+            "w1280": "https://imageresizer.static9.net.au/mDdT5d4MQXaNCAIQpH_AR_c0BOo=/1280x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F12%2F658518%2Fgroup-61484.png",
+            "w1920": "https://imageresizer.static9.net.au/QqTJm7HsJc-VCZfk83rBM_b8X24=/1920x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F12%2F658518%2Fgroup-61484.png"
+          }
+        },
+        "id": 584,
+        "color": "#02C7E1",
+        "name": "LMN",
+        "eventCount": "1",
+        "slug": "lmn",
+        "selected": false,
+        "isChannelGroup": true,
+        "currentProgramName": "Framed By My Fiance",
+        "programStartDate": "2025-02-24T04:06:16.000Z",
+        "programEndDate": "2025-02-24T05:33:21.000Z",
+        "groupStartTime": "2024-11-13T13:00:00.000Z",
+        "groupEndTime": "2027-11-18T13:00:00.000Z",
+        "seoTitle": "",
+        "seoDescription": ""
+      }, {
+        "type": "live-event-group",
+        "signpost": null,
+        "switcherLogo": {
+          "alt": "Seinfeld",
+          "sizes": {
+            "w320": "https://imageresizer.static9.net.au/XRUxZZmAsWqQWKwoBa_DQXVsBL4=/320x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585342%2Fgroup-61657.png",
+            "w480": "https://imageresizer.static9.net.au/ouqsl5uybw6TIUBaNVs5gPSDHUM=/480x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585342%2Fgroup-61657.png",
+            "w768": "https://imageresizer.static9.net.au/yKlUxIHgYC5cpCmL1DYpRCQ6w4o=/768x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585342%2Fgroup-61657.png",
+            "w1280": "https://imageresizer.static9.net.au/ZFN3yw8tS1DMeg_rqQ4XRANO97M=/1280x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585342%2Fgroup-61657.png",
+            "w1920": "https://imageresizer.static9.net.au/4QIn-44OtYuGE_VxI8xoTVlS1Fg=/1920x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585342%2Fgroup-61657.png"
+          },
+          "webpSizes": {
+            "w320": "https://imageresizer.static9.net.au/i97xdEMWPfGQijc866d0ekKosnA=/320x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585342%2Fgroup-61657.png",
+            "w480": "https://imageresizer.static9.net.au/hW114ChJ408sK0OCB-yH44-Z9qY=/480x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585342%2Fgroup-61657.png",
+            "w768": "https://imageresizer.static9.net.au/E_gJiOSVtZC6RCL1tWFtxNVCbUQ=/768x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585342%2Fgroup-61657.png",
+            "w1280": "https://imageresizer.static9.net.au/4at-Fuxpm0A2jWt47b2Q_5sHvHA=/1280x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585342%2Fgroup-61657.png",
+            "w1920": "https://imageresizer.static9.net.au/DwnA_HeXfrg0BLVVy_U_cHIN6bc=/1920x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585342%2Fgroup-61657.png"
+          }
+        },
+        "id": 330,
+        "color": "#02C7E1",
+        "name": "Seinfeld",
+        "eventCount": "1",
+        "slug": "seinfeld",
+        "selected": false,
+        "isChannelGroup": true,
+        "currentProgramName": "Seinfeld",
+        "programStartDate": "2025-02-24T04:58:22.000Z",
+        "programEndDate": "2025-02-24T05:23:48.000Z",
+        "groupStartTime": "2023-11-08T13:00:00.000Z",
+        "groupEndTime": "2032-12-30T13:00:00.000Z",
+        "seoTitle": "",
+        "seoDescription": ""
+      }, {
+        "type": "live-event-group",
+        "signpost": null,
+        "switcherLogo": {
+          "alt": "9Crime",
+          "sizes": {
+            "w320": "https://imageresizer.static9.net.au/oebnMoEbxRjJwIon15nzpYvk90E=/320x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585343%2Fgroup-61566.png",
+            "w480": "https://imageresizer.static9.net.au/9bO_088-ivbmoB4FXhQ-imxueok=/480x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585343%2Fgroup-61566.png",
+            "w768": "https://imageresizer.static9.net.au/OwBWBtMcLMF5vBP09k6w4LneJQM=/768x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585343%2Fgroup-61566.png",
+            "w1280": "https://imageresizer.static9.net.au/jbXEoyCFpAJi74bQ8kM_tk1zwEA=/1280x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585343%2Fgroup-61566.png",
+            "w1920": "https://imageresizer.static9.net.au/sUkmFs6siJ887ldHFaSNXTA0uBs=/1920x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585343%2Fgroup-61566.png"
+          },
+          "webpSizes": {
+            "w320": "https://imageresizer.static9.net.au/WAMV4K46apKytdFwnwmIuRA_hrY=/320x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585343%2Fgroup-61566.png",
+            "w480": "https://imageresizer.static9.net.au/FphLVTQGEBwkYEfps1R87K7FqCg=/480x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585343%2Fgroup-61566.png",
+            "w768": "https://imageresizer.static9.net.au/OVzHjkC9jp8enxiRA5Pxk8pfq0A=/768x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585343%2Fgroup-61566.png",
+            "w1280": "https://imageresizer.static9.net.au/toyP5MQQ1GWPx189U2x3VGNjT50=/1280x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585343%2Fgroup-61566.png",
+            "w1920": "https://imageresizer.static9.net.au/Lbj4az_ufsPsJSnDbtjAVQ2c5q4=/1920x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585343%2Fgroup-61566.png"
+          }
+        },
+        "id": 381,
+        "color": "#02C7E1",
+        "name": "9Crime",
+        "eventCount": "1",
+        "slug": "9crime",
+        "selected": false,
+        "isChannelGroup": true,
+        "currentProgramName": "True Conviction",
+        "programStartDate": "2025-02-24T04:38:51.000Z",
+        "programEndDate": "2025-02-24T05:26:23.000Z",
+        "groupStartTime": "2024-02-25T13:00:00.000Z",
+        "groupEndTime": "2030-12-30T13:00:00.000Z",
+        "seoTitle": "",
+        "seoDescription": ""
+      }, {
+        "type": "live-event-group",
+        "signpost": null,
+        "switcherLogo": {
+          "alt": "BBC Earth",
+          "sizes": {
+            "w320": "https://imageresizer.static9.net.au/sqW2dg2E9kvMQ3iQH0CGqAnK69k=/320x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F648311%2Fgroup-61770.png",
+            "w480": "https://imageresizer.static9.net.au/FFPbvA9Vm7wrXjARmIQB1fFElIs=/480x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F648311%2Fgroup-61770.png",
+            "w768": "https://imageresizer.static9.net.au/Rc3CC94BjHA9E9BOLrSI22N81PI=/768x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F648311%2Fgroup-61770.png",
+            "w1280": "https://imageresizer.static9.net.au/6OpSAUk6IghVKD33ymWvovFLjl0=/1280x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F648311%2Fgroup-61770.png",
+            "w1920": "https://imageresizer.static9.net.au/Oq8vFqTE_YcQrNMuMkdMVp2Gydw=/1920x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F648311%2Fgroup-61770.png"
+          },
+          "webpSizes": {
+            "w320": "https://imageresizer.static9.net.au/m4wYJcZTyx27y63GpOlUa3NckLs=/320x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F648311%2Fgroup-61770.png",
+            "w480": "https://imageresizer.static9.net.au/iFxUFDoQJGwDpfxN-lnL00GUZ5o=/480x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F648311%2Fgroup-61770.png",
+            "w768": "https://imageresizer.static9.net.au/NkpdSK8QAbZRseVoLmGIfAD5W9Q=/768x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F648311%2Fgroup-61770.png",
+            "w1280": "https://imageresizer.static9.net.au/8vdsG-iuwBCqnye4EljGKiwer-c=/1280x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F648311%2Fgroup-61770.png",
+            "w1920": "https://imageresizer.static9.net.au/RCL73LjNYZQlrN-nOQ2ycMAKqog=/1920x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F648311%2Fgroup-61770.png"
+          }
+        },
+        "id": 589,
+        "color": "#02C7E1",
+        "name": "BBC Earth",
+        "eventCount": "1",
+        "slug": "bbc-earth",
+        "selected": false,
+        "isChannelGroup": true,
+        "currentProgramName": "Wild Africa",
+        "programStartDate": "2025-02-24T04:54:31.000Z",
+        "programEndDate": "2025-02-24T05:48:42.000Z",
+        "groupStartTime": "2024-10-28T13:00:00.000Z",
+        "groupEndTime": "2026-11-30T12:59:00.000Z",
+        "seoTitle": "",
+        "seoDescription": ""
+      }, {
+        "type": "live-event-group",
+        "signpost": null,
+        "switcherLogo": {
+          "alt": "BBC Antiques Roadshow",
+          "sizes": {
+            "w320": "https://imageresizer.static9.net.au/P9YXxmzBuJe9qbFv5fS4_zLWk2U=/320x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F648315%2Fgroup-61774.png",
+            "w480": "https://imageresizer.static9.net.au/rVLPzA1bxkbY-jj_Zum8I-KpHV8=/480x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F648315%2Fgroup-61774.png",
+            "w768": "https://imageresizer.static9.net.au/zRjEXK-6iFh-92EKnAZN9rXREkA=/768x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F648315%2Fgroup-61774.png",
+            "w1280": "https://imageresizer.static9.net.au/Yi8CV29VIHrjscKuPRk4N6fvx6U=/1280x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F648315%2Fgroup-61774.png",
+            "w1920": "https://imageresizer.static9.net.au/wxfnxenBzf8gZ3vCyW9oT3yKLF4=/1920x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F648315%2Fgroup-61774.png"
+          },
+          "webpSizes": {
+            "w320": "https://imageresizer.static9.net.au/6uTE2TQyVhLS7_lGcV4NhLnr03Q=/320x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F648315%2Fgroup-61774.png",
+            "w480": "https://imageresizer.static9.net.au/0FdIm079YWGpZJiedQm5X1qxaUk=/480x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F648315%2Fgroup-61774.png",
+            "w768": "https://imageresizer.static9.net.au/KHpw8H-I4NF1XtpJaHh6griNw9U=/768x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F648315%2Fgroup-61774.png",
+            "w1280": "https://imageresizer.static9.net.au/ENOZQORuelP-16uK1WHMNzessoU=/1280x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F648315%2Fgroup-61774.png",
+            "w1920": "https://imageresizer.static9.net.au/EJo7AUKjgcUyW1Uyq0kpDzpo4fg=/1920x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F648315%2Fgroup-61774.png"
+          }
+        },
+        "id": 585,
+        "color": "#02C7E1",
+        "name": "BBC Antiques Roadshow",
+        "eventCount": "1",
+        "slug": "bbc-antiques-roadshow-247",
+        "selected": false,
+        "isChannelGroup": true,
+        "currentProgramName": "Antiques Roadshow",
+        "programStartDate": "2025-02-24T04:41:36.000Z",
+        "programEndDate": "2025-02-24T05:34:13.000Z",
+        "groupStartTime": "2024-10-28T13:00:00.000Z",
+        "groupEndTime": "2026-11-30T12:59:00.000Z",
+        "seoTitle": "",
+        "seoDescription": ""
+      }, {
+        "type": "live-event-group",
+        "signpost": null,
+        "switcherLogo": {
+          "alt": "BBC Home & Garden",
+          "sizes": {
+            "w320": "https://imageresizer.static9.net.au/jFW7rNGyCaWE6ckM7ur_vV6r9_k=/320x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F648313%2Fgroup-61771.png",
+            "w480": "https://imageresizer.static9.net.au/oIa5-vgEWq_Hs7PNnXMoCic3cb8=/480x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F648313%2Fgroup-61771.png",
+            "w768": "https://imageresizer.static9.net.au/RHsGPvwhtEktqfW-Tg4ygRMy1ug=/768x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F648313%2Fgroup-61771.png",
+            "w1280": "https://imageresizer.static9.net.au/9aog8ftz_txTM9kPTRBjbq886Pg=/1280x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F648313%2Fgroup-61771.png",
+            "w1920": "https://imageresizer.static9.net.au/RIx_cLBgLjGOBzGX02Tse4EKmZg=/1920x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F648313%2Fgroup-61771.png"
+          },
+          "webpSizes": {
+            "w320": "https://imageresizer.static9.net.au/IopPYxD9K18egawl9rRGy6aJLtY=/320x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F648313%2Fgroup-61771.png",
+            "w480": "https://imageresizer.static9.net.au/B-eSRwVRUAnS20e0ZXRKpCWTQno=/480x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F648313%2Fgroup-61771.png",
+            "w768": "https://imageresizer.static9.net.au/7GN0gOFsDvrxzWGVJN3pOCijKGY=/768x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F648313%2Fgroup-61771.png",
+            "w1280": "https://imageresizer.static9.net.au/eQv6twQo8bJqTMhsZtQTRdBLGUo=/1280x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F648313%2Fgroup-61771.png",
+            "w1920": "https://imageresizer.static9.net.au/ZT6qfgSgCxhgoiZ-X677YP4JLx0=/1920x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F648313%2Fgroup-61771.png"
+          }
+        },
+        "id": 587,
+        "color": "#02C7E1",
+        "name": "BBC Home & Garden",
+        "eventCount": "1",
+        "slug": "bbc-home-garden",
+        "selected": false,
+        "isChannelGroup": true,
+        "currentProgramName": "Builder's, Sweat and Tears",
+        "programStartDate": "2025-02-24T04:52:20.000Z",
+        "programEndDate": "2025-02-24T05:23:09.000Z",
+        "groupStartTime": "2024-10-28T13:00:00.000Z",
+        "groupEndTime": "2026-11-30T12:59:00.000Z",
+        "seoTitle": "",
+        "seoDescription": ""
+      }, {
+        "type": "live-event-group",
+        "signpost": null,
+        "switcherLogo": {
+          "alt": "60 Minutes Australia",
+          "sizes": {
+            "w320": "https://imageresizer.static9.net.au/mstn8FL7AN32G8jKKXHWe_Up8RQ=/320x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585173%2Fsquircle_60mins.png",
+            "w480": "https://imageresizer.static9.net.au/feil0D4zRaFSF1qP33E6ozZYAU0=/480x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585173%2Fsquircle_60mins.png",
+            "w768": "https://imageresizer.static9.net.au/kufGcZyXI7lNm32WrMV86xPNAnk=/768x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585173%2Fsquircle_60mins.png",
+            "w1280": "https://imageresizer.static9.net.au/xdjvUk_oHJWZDYmgd7EifxJ2U44=/1280x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585173%2Fsquircle_60mins.png",
+            "w1920": "https://imageresizer.static9.net.au/xXcHn8IA0qvYJ4sR9gDE5IABuls=/1920x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585173%2Fsquircle_60mins.png"
+          },
+          "webpSizes": {
+            "w320": "https://imageresizer.static9.net.au/7UFCnSc3k8naTopNuAFmxZESQ2A=/320x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585173%2Fsquircle_60mins.png",
+            "w480": "https://imageresizer.static9.net.au/F3zdKarJ0nUD54rEtdZZavyNYms=/480x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585173%2Fsquircle_60mins.png",
+            "w768": "https://imageresizer.static9.net.au/xLLC6JfXPyA3wQyD7BP6t3l4EjY=/768x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585173%2Fsquircle_60mins.png",
+            "w1280": "https://imageresizer.static9.net.au/LC9gKFa0lh2xYRa2ES737DCA3CI=/1280x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585173%2Fsquircle_60mins.png",
+            "w1920": "https://imageresizer.static9.net.au/4bmD80tqY4eKHGYx1vGswjn7Vlk=/1920x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585173%2Fsquircle_60mins.png"
+          }
+        },
+        "id": 382,
+        "color": "#02C7E1",
+        "name": "60 Minutes Australia",
+        "eventCount": "1",
+        "slug": "60-minutes-australia",
+        "selected": false,
+        "isChannelGroup": true,
+        "currentProgramName": "60 Minutes Australia 24/7",
+        "programStartDate": "2025-02-24T04:40:59.000Z",
+        "programEndDate": "2025-02-24T05:06:05.000Z",
+        "groupStartTime": "2024-02-25T13:00:00.000Z",
+        "groupEndTime": "2030-12-30T13:00:00.000Z",
+        "seoTitle": "",
+        "seoDescription": ""
+      }, {
+        "type": "live-event-group",
+        "signpost": null,
+        "switcherLogo": {
+          "alt": "The Block 24/7",
+          "sizes": {
+            "w320": "https://imageresizer.static9.net.au/66FsyklMSP7Zm2pXGz0L_f5NJEU=/320x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F08%2F623508%2Ftheblock_squircle.png",
+            "w480": "https://imageresizer.static9.net.au/mJmvNNWUUim_NwpS-Ohh5AGbKfM=/480x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F08%2F623508%2Ftheblock_squircle.png",
+            "w768": "https://imageresizer.static9.net.au/Mj-NaVq7oZgtzt2bf55lkLIfyuQ=/768x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F08%2F623508%2Ftheblock_squircle.png",
+            "w1280": "https://imageresizer.static9.net.au/7rYUB4MIqXCxbeBSE1EZUUrIaZQ=/1280x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F08%2F623508%2Ftheblock_squircle.png",
+            "w1920": "https://imageresizer.static9.net.au/BXTUF9ADT4eTxj82tbaFfaTi8EE=/1920x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F08%2F623508%2Ftheblock_squircle.png"
+          },
+          "webpSizes": {
+            "w320": "https://imageresizer.static9.net.au/1clrMVti1X7YPu2dtAQSkrj7bXY=/320x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F08%2F623508%2Ftheblock_squircle.png",
+            "w480": "https://imageresizer.static9.net.au/cmY7ilSb6eaNN7z53W4AIPtQk-I=/480x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F08%2F623508%2Ftheblock_squircle.png",
+            "w768": "https://imageresizer.static9.net.au/p0TSd7_CsdPXc4H1DQMkUy5NKik=/768x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F08%2F623508%2Ftheblock_squircle.png",
+            "w1280": "https://imageresizer.static9.net.au/QoAWzq6pQvAWYDWl3hvDhUZrAr4=/1280x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F08%2F623508%2Ftheblock_squircle.png",
+            "w1920": "https://imageresizer.static9.net.au/Iot3hbLbUoNlIMvQ3_T7opfG0hU=/1920x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F08%2F623508%2Ftheblock_squircle.png"
+          }
+        },
+        "id": 554,
+        "color": "#02C7E1",
+        "name": "The Block 24/7",
+        "eventCount": "1",
+        "slug": "the-block-247",
+        "selected": false,
+        "isChannelGroup": true,
+        "currentProgramName": "The Block",
+        "programStartDate": "2025-02-24T04:11:59.000Z",
+        "programEndDate": "2025-02-24T05:25:50.000Z",
+        "groupStartTime": "2024-07-08T14:00:00.000Z",
+        "groupEndTime": "2032-12-30T13:00:00.000Z",
+        "seoTitle": "",
+        "seoDescription": ""
+      }, {
+        "type": "live-event-group",
+        "signpost": null,
+        "switcherLogo": {
+          "alt": "Married At First Sight",
+          "sizes": {
+            "w320": "https://imageresizer.static9.net.au/7tpGfLpoFZ0KduhrkQMFoJCtklo=/320x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585176%2Fsquircle_mafs.png",
+            "w480": "https://imageresizer.static9.net.au/JoqJoFIu0kmvByzbu1032kaMIf0=/480x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585176%2Fsquircle_mafs.png",
+            "w768": "https://imageresizer.static9.net.au/OCF69HZLp4AWm0cGB8bvgx4U8mQ=/768x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585176%2Fsquircle_mafs.png",
+            "w1280": "https://imageresizer.static9.net.au/pib7nuNpPMIOxYHE7SQZx87wG8c=/1280x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585176%2Fsquircle_mafs.png",
+            "w1920": "https://imageresizer.static9.net.au/f41E40Ak-LWP6p4xdDCIa22HaXI=/1920x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585176%2Fsquircle_mafs.png"
+          },
+          "webpSizes": {
+            "w320": "https://imageresizer.static9.net.au/Xf0ZdEjTc9KdyEW7qCf-sZpGNgM=/320x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585176%2Fsquircle_mafs.png",
+            "w480": "https://imageresizer.static9.net.au/CWZ2cqJbD3Tp4v59uR-8zqnAQ4Q=/480x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585176%2Fsquircle_mafs.png",
+            "w768": "https://imageresizer.static9.net.au/j_4Tb5iFudpTahPTGhzscHUzM1M=/768x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585176%2Fsquircle_mafs.png",
+            "w1280": "https://imageresizer.static9.net.au/T_pBlLiYv59srev4XeyyOyRc32o=/1280x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585176%2Fsquircle_mafs.png",
+            "w1920": "https://imageresizer.static9.net.au/ca2qXMFzPspyitcpy7-oLEpaIOc=/1920x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585176%2Fsquircle_mafs.png"
+          }
+        },
+        "id": 383,
+        "color": "#02C7E1",
+        "name": "Married At First Sight",
+        "eventCount": "1",
+        "slug": "married-at-first-sight",
+        "selected": false,
+        "isChannelGroup": true,
+        "currentProgramName": "Married at First Sight",
+        "programStartDate": "2025-02-24T04:06:31.000Z",
+        "programEndDate": "2025-02-24T05:18:04.000Z",
+        "groupStartTime": "2024-02-25T13:00:00.000Z",
+        "groupEndTime": "2030-12-30T13:00:00.000Z",
+        "seoTitle": "",
+        "seoDescription": ""
+      }, {
+        "type": "live-event-group",
+        "signpost": null,
+        "switcherLogo": {
+          "alt": "Dance Moms 24/7",
+          "sizes": {
+            "w320": "https://imageresizer.static9.net.au/NoX74YAGos4SxXlOYc66l5DWBCQ=/320x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585178%2Fsquircle_dancemoms.png",
+            "w480": "https://imageresizer.static9.net.au/3P4lTRxSnGWQwr5sjtPAynOKUzc=/480x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585178%2Fsquircle_dancemoms.png",
+            "w768": "https://imageresizer.static9.net.au/OKBRw5HKp9hAAVX3XM-A1HrVRug=/768x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585178%2Fsquircle_dancemoms.png",
+            "w1280": "https://imageresizer.static9.net.au/2d1qqmq3QfndDvSX7IQZcqwSo3c=/1280x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585178%2Fsquircle_dancemoms.png",
+            "w1920": "https://imageresizer.static9.net.au/LdAUuUQaARxuEl7PuyXsBd88VKQ=/1920x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585178%2Fsquircle_dancemoms.png"
+          },
+          "webpSizes": {
+            "w320": "https://imageresizer.static9.net.au/hEv64WsRBRNg-5uqTuf-o7jVprc=/320x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585178%2Fsquircle_dancemoms.png",
+            "w480": "https://imageresizer.static9.net.au/aW32bUYEN36-WakzUsK6jIBU_t0=/480x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585178%2Fsquircle_dancemoms.png",
+            "w768": "https://imageresizer.static9.net.au/TvN58T5H2xS0P4I8spgmV8It-C8=/768x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585178%2Fsquircle_dancemoms.png",
+            "w1280": "https://imageresizer.static9.net.au/sovqPEJzgpoVK4-C-na3NeE5PQI=/1280x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585178%2Fsquircle_dancemoms.png",
+            "w1920": "https://imageresizer.static9.net.au/Y-0wV1aWHwOk6Qs-REnmH0fTPvo=/1920x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585178%2Fsquircle_dancemoms.png"
+          }
+        },
+        "id": 378,
+        "color": "#02C7E1",
+        "name": "Dance Moms 24/7",
+        "eventCount": "1",
+        "slug": "dance-moms-247",
+        "selected": false,
+        "isChannelGroup": true,
+        "currentProgramName": "Dance Moms",
+        "programStartDate": "2025-02-24T04:30:39.000Z",
+        "programEndDate": "2025-02-24T05:13:38.000Z",
+        "groupStartTime": "2024-02-15T13:00:00.000Z",
+        "groupEndTime": "2032-12-31T12:59:00.000Z",
+        "seoTitle": "",
+        "seoDescription": ""
+      }, {
+        "type": "live-event-group",
+        "signpost": null,
+        "switcherLogo": {
+          "alt": "Pedestrian Television",
+          "sizes": {
+            "w320": "https://imageresizer.static9.net.au/3r_WIwi9HgYu3p7nrPm7VZ0dFo8=/320x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585345%2Fgroup-61560.png",
+            "w480": "https://imageresizer.static9.net.au/JyW31-CKUjwbcu7rilQwp14wEgg=/480x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585345%2Fgroup-61560.png",
+            "w768": "https://imageresizer.static9.net.au/bkUY-nMUmtmDMf5yGiSGOPC-Bog=/768x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585345%2Fgroup-61560.png",
+            "w1280": "https://imageresizer.static9.net.au/aJQuQyrXUMfibbLQjxUn3v3-BZ4=/1280x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585345%2Fgroup-61560.png",
+            "w1920": "https://imageresizer.static9.net.au/IH97eJuZUazoDrYv1gQuUQCsU_Q=/1920x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585345%2Fgroup-61560.png"
+          },
+          "webpSizes": {
+            "w320": "https://imageresizer.static9.net.au/n0qO1mmRsH1M8oMVjwKscrpLVLg=/320x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585345%2Fgroup-61560.png",
+            "w480": "https://imageresizer.static9.net.au/ca0aW24mt9WLxVW6UN7twOcwPmY=/480x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585345%2Fgroup-61560.png",
+            "w768": "https://imageresizer.static9.net.au/zlCL4p51YLE2KI8UO6z96HKMxbg=/768x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585345%2Fgroup-61560.png",
+            "w1280": "https://imageresizer.static9.net.au/DEvXaM8fOORQKw5_rFbjVi5uf3o=/1280x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585345%2Fgroup-61560.png",
+            "w1920": "https://imageresizer.static9.net.au/-NW9-AKnOwjdLf7RK_xD50ettQI=/1920x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F04%2F585345%2Fgroup-61560.png"
+          }
+        },
+        "id": 322,
+        "color": "#02C7E1",
+        "name": "Pedestrian Television",
+        "eventCount": "1",
+        "slug": "pedestrian-television",
+        "selected": false,
+        "isChannelGroup": true,
+        "currentProgramName": "Bromans",
+        "programStartDate": "2025-02-24T04:12:25.000Z",
+        "programEndDate": "2025-02-24T05:01:10.000Z",
+        "groupStartTime": "2023-07-11T14:00:00.000Z",
+        "groupEndTime": "2025-12-30T14:20:00.000Z",
+        "seoTitle": "Watch Pedestrian Television Live TV: Live Stream online | 9Now",
+        "seoDescription": "Bringing the chaos for young Aussies, from cult classics and cooked comedy to the latest tunes."
+      }],
+      "promoRail": {
+        "id": "8f694798-2091-11ec-8001-000100000023",
+        "title": "Featured Shows",
+        "type": "rail",
+        "items": [{
+          "id": 2,
+          "name": "Married at First Sight",
+          "slug": "married-at-first-sight",
+          "subtitle": "319 Episodes",
+          "image": {
+            "alt": "Season 12",
+            "sizes": {
+              "w320": "https://imageresizer.static9.net.au/8axoahOliUJgz88D11WpYHdSZxQ=/320x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F02%2F672481%2Fmafs_s12_9now_nextgenstandardcard.png",
+              "w480": "https://imageresizer.static9.net.au/RP0AD7BmpUzKCEK6mX4b3OGIttw=/480x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F02%2F672481%2Fmafs_s12_9now_nextgenstandardcard.png",
+              "w768": "https://imageresizer.static9.net.au/jRhbA9tWy9DPy9JDQ_G6_PHSrMM=/768x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F02%2F672481%2Fmafs_s12_9now_nextgenstandardcard.png",
+              "w1280": "https://imageresizer.static9.net.au/adPyyL1Nj-2oW9LOzWA5EuALBeM=/1280x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F02%2F672481%2Fmafs_s12_9now_nextgenstandardcard.png",
+              "w1920": "https://imageresizer.static9.net.au/dmK4zn1WrRCTpqylWXFX0ZpOp7Y=/1920x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F02%2F672481%2Fmafs_s12_9now_nextgenstandardcard.png"
+            },
+            "webpSizes": {
+              "w320": "https://imageresizer.static9.net.au/W9JQ-KE3GJNuyZHWfgkBIwu79MA=/320x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F02%2F672481%2Fmafs_s12_9now_nextgenstandardcard.png",
+              "w480": "https://imageresizer.static9.net.au/KIWbWKRZNYH1f6jErXoUsKt9uQM=/480x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F02%2F672481%2Fmafs_s12_9now_nextgenstandardcard.png",
+              "w768": "https://imageresizer.static9.net.au/jf0dbZjHJNIXj_X6aSOZKsXQx5U=/768x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F02%2F672481%2Fmafs_s12_9now_nextgenstandardcard.png",
+              "w1280": "https://imageresizer.static9.net.au/XEHypLpQsMTaiHykHWClAuKbOaM=/1280x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F02%2F672481%2Fmafs_s12_9now_nextgenstandardcard.png",
+              "w1920": "https://imageresizer.static9.net.au/IvqRdN15EmlJ2ocbbjrvxh9CkJ4=/1920x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F02%2F672481%2Fmafs_s12_9now_nextgenstandardcard.png"
+            }
+          }
+        }, {
+          "id": 3286,
+          "name": "Love Island UK: All Stars",
+          "slug": "love-island-uk-all-stars",
+          "subtitle": "72 Episodes",
+          "image": {
+            "alt": "Season 2",
+            "sizes": {
+              "w320": "https://imageresizer.static9.net.au/jXqYUP3FVHo383a6tZyldmAB1HQ=/320x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F01%2F662174%2Floveislandukallstars_s2_9now_keyartstandardcard.png",
+              "w480": "https://imageresizer.static9.net.au/NZp-GY_brYpuexQHqvKWBxXN12E=/480x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F01%2F662174%2Floveislandukallstars_s2_9now_keyartstandardcard.png",
+              "w768": "https://imageresizer.static9.net.au/ll8yOA8Ukq_nPbcp0d8KFQfEhEU=/768x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F01%2F662174%2Floveislandukallstars_s2_9now_keyartstandardcard.png",
+              "w1280": "https://imageresizer.static9.net.au/UqaTwI9to_d9dKXfjP8PJwOsMv4=/1280x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F01%2F662174%2Floveislandukallstars_s2_9now_keyartstandardcard.png",
+              "w1920": "https://imageresizer.static9.net.au/IWQvaL1f23pyr53LUtgvUpS_NMo=/1920x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F01%2F662174%2Floveislandukallstars_s2_9now_keyartstandardcard.png"
+            },
+            "webpSizes": {
+              "w320": "https://imageresizer.static9.net.au/IHSZZY0wHyq3eiMLQd6il1Pb4EQ=/320x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F01%2F662174%2Floveislandukallstars_s2_9now_keyartstandardcard.png",
+              "w480": "https://imageresizer.static9.net.au/IIKZIGaEDro6jUsCRZ8DoiRf5QY=/480x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F01%2F662174%2Floveislandukallstars_s2_9now_keyartstandardcard.png",
+              "w768": "https://imageresizer.static9.net.au/fvHZqiAJbJc0fq_iGtBjeCfluhI=/768x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F01%2F662174%2Floveislandukallstars_s2_9now_keyartstandardcard.png",
+              "w1280": "https://imageresizer.static9.net.au/tr_M8JASpLYQ02jHl5BmphvD4VE=/1280x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F01%2F662174%2Floveislandukallstars_s2_9now_keyartstandardcard.png",
+              "w1920": "https://imageresizer.static9.net.au/DFcijv9HO-1cxxynATvr9HNapvk=/1920x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F01%2F662174%2Floveislandukallstars_s2_9now_keyartstandardcard.png"
+            }
+          }
+        }, {
+          "id": 4338,
+          "name": "Madam",
+          "slug": "madam",
+          "subtitle": "10 Episodes",
+          "image": {
+            "alt": "Season 1",
+            "sizes": {
+              "w320": "https://imageresizer.static9.net.au/06llEEctvf7Ew7McGLt_5ZLF9Ng=/320x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F01%2F667920%2Fmadam_s1_9now_nextgenstandardcard.png",
+              "w480": "https://imageresizer.static9.net.au/EiHgAywmoEsga1va1118hWuWZdI=/480x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F01%2F667920%2Fmadam_s1_9now_nextgenstandardcard.png",
+              "w768": "https://imageresizer.static9.net.au/geOipLaehQPUpEA7um4MMlLcZ2s=/768x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F01%2F667920%2Fmadam_s1_9now_nextgenstandardcard.png",
+              "w1280": "https://imageresizer.static9.net.au/kD5Ypb47D878A_pk4zxZFbXkZG8=/1280x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F01%2F667920%2Fmadam_s1_9now_nextgenstandardcard.png",
+              "w1920": "https://imageresizer.static9.net.au/yjGM_WJU36dkaM8VlJfKjznyDQM=/1920x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F01%2F667920%2Fmadam_s1_9now_nextgenstandardcard.png"
+            },
+            "webpSizes": {
+              "w320": "https://imageresizer.static9.net.au/8j04NMJJ40OxIurxyZBmgG4Md14=/320x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F01%2F667920%2Fmadam_s1_9now_nextgenstandardcard.png",
+              "w480": "https://imageresizer.static9.net.au/eiErTXLBqN13-5K6OcedhEPjfmw=/480x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F01%2F667920%2Fmadam_s1_9now_nextgenstandardcard.png",
+              "w768": "https://imageresizer.static9.net.au/XiNLVq6HyRqkHMGZ8ICc_C6FWMM=/768x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F01%2F667920%2Fmadam_s1_9now_nextgenstandardcard.png",
+              "w1280": "https://imageresizer.static9.net.au/VwKlVEz1FTZq80N_Cj6UtWGO8nE=/1280x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F01%2F667920%2Fmadam_s1_9now_nextgenstandardcard.png",
+              "w1920": "https://imageresizer.static9.net.au/kHuNzZfCd1hFHQjSf75N_Uy6Q9E=/1920x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F01%2F667920%2Fmadam_s1_9now_nextgenstandardcard.png"
+            }
+          }
+        }, {
+          "id": 2693,
+          "name": "Big Miracles",
+          "slug": "big-miracles",
+          "subtitle": "16 Episodes",
+          "image": {
+            "alt": "Season 3",
+            "sizes": {
+              "w320": "https://imageresizer.static9.net.au/pl-vwV-ce9PRggrByf47ANgEDdw=/320x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F01%2F662143%2Fbimi_s3_9now_nextgenstandardcard.png",
+              "w480": "https://imageresizer.static9.net.au/xkWfdXcd7FcwMRI5IqaTu7O6Kdo=/480x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F01%2F662143%2Fbimi_s3_9now_nextgenstandardcard.png",
+              "w768": "https://imageresizer.static9.net.au/s66jjPzUlKnWzds1N-t3876qYvM=/768x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F01%2F662143%2Fbimi_s3_9now_nextgenstandardcard.png",
+              "w1280": "https://imageresizer.static9.net.au/I4BRURboRhW181GKC9o6MHaHxyQ=/1280x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F01%2F662143%2Fbimi_s3_9now_nextgenstandardcard.png",
+              "w1920": "https://imageresizer.static9.net.au/BXhNmRGGQA_X1B4e_GxgK-Woa_8=/1920x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F01%2F662143%2Fbimi_s3_9now_nextgenstandardcard.png"
+            },
+            "webpSizes": {
+              "w320": "https://imageresizer.static9.net.au/J46qUPgb8EsGLlEy7Ii8SUcC1cM=/320x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F01%2F662143%2Fbimi_s3_9now_nextgenstandardcard.png",
+              "w480": "https://imageresizer.static9.net.au/jAvTvEY0CWyoopllmvI1rqFWOZY=/480x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F01%2F662143%2Fbimi_s3_9now_nextgenstandardcard.png",
+              "w768": "https://imageresizer.static9.net.au/w2KJG2gwPtTzKgEqmjyEPamgQDc=/768x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F01%2F662143%2Fbimi_s3_9now_nextgenstandardcard.png",
+              "w1280": "https://imageresizer.static9.net.au/pq6JgkrYkgWy0zgQQHp6RWbeYXw=/1280x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F01%2F662143%2Fbimi_s3_9now_nextgenstandardcard.png",
+              "w1920": "https://imageresizer.static9.net.au/sxxmxvtQ9wjhE8m0nF3MQ2btSVs=/1920x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F01%2F662143%2Fbimi_s3_9now_nextgenstandardcard.png"
+            }
+          }
+        }, {
+          "id": 44,
+          "name": "60 Minutes",
+          "slug": "60-minutes",
+          "subtitle": "422 Episodes",
+          "image": {
+            "alt": "Season 2025",
+            "sizes": {
+              "w320": "https://imageresizer.static9.net.au/TuD00jW-BmexMxBTBs5I6gkFhQA=/320x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F02%2F671034%2F60mins25_9now_standardcard.png",
+              "w480": "https://imageresizer.static9.net.au/LVLOtQDyV00yV5mwbxW0Ad_y11o=/480x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F02%2F671034%2F60mins25_9now_standardcard.png",
+              "w768": "https://imageresizer.static9.net.au/LzP49d7ny6IoMZv2FGI6jeSIZNA=/768x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F02%2F671034%2F60mins25_9now_standardcard.png",
+              "w1280": "https://imageresizer.static9.net.au/TcLxTsKyr278pB6fY624DbRjQCE=/1280x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F02%2F671034%2F60mins25_9now_standardcard.png",
+              "w1920": "https://imageresizer.static9.net.au/pJnBIRw9zY2XTyKvPgBLzBbJmdM=/1920x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F02%2F671034%2F60mins25_9now_standardcard.png"
+            },
+            "webpSizes": {
+              "w320": "https://imageresizer.static9.net.au/XkcR3i78BRfx6D2mPfWvDVGDQh4=/320x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F02%2F671034%2F60mins25_9now_standardcard.png",
+              "w480": "https://imageresizer.static9.net.au/lazKurva0UTKsiIWgJ1_-2zdV4s=/480x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F02%2F671034%2F60mins25_9now_standardcard.png",
+              "w768": "https://imageresizer.static9.net.au/PdZlwazsJtPhCnffl8Fs5kPMBY8=/768x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F02%2F671034%2F60mins25_9now_standardcard.png",
+              "w1280": "https://imageresizer.static9.net.au/vusL_QNU0ORED73CvZpVDC-uc8E=/1280x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F02%2F671034%2F60mins25_9now_standardcard.png",
+              "w1920": "https://imageresizer.static9.net.au/bNQN_KfLZ3YQT-UsPxXZ8QlueYM=/1920x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F02%2F671034%2F60mins25_9now_standardcard.png"
+            }
+          }
+        }, {
+          "id": 3160,
+          "name": "Australian Crime Stories: The Investigators",
+          "slug": "australian-crime-stories-the-investigators",
+          "subtitle": "8 Episodes",
+          "image": {
+            "alt": "Season 2",
+            "sizes": {
+              "w320": "https://imageresizer.static9.net.au/SmakFJ7qKgTHkvHPHm5La0B3bO8=/320x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F02%2F669083%2Fauscrimestories_9now_nextgenstandardcard.png",
+              "w480": "https://imageresizer.static9.net.au/F3AR0fuzV0h54SNl9PUCgL83gq4=/480x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F02%2F669083%2Fauscrimestories_9now_nextgenstandardcard.png",
+              "w768": "https://imageresizer.static9.net.au/bJegjFMfKytYETpJROsaWCzQSTQ=/768x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F02%2F669083%2Fauscrimestories_9now_nextgenstandardcard.png",
+              "w1280": "https://imageresizer.static9.net.au/vFtgrqIeOutxy103TevQZJ4CA20=/1280x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F02%2F669083%2Fauscrimestories_9now_nextgenstandardcard.png",
+              "w1920": "https://imageresizer.static9.net.au/Gp1CPP69OreWlGlCTAo-odeHSBI=/1920x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F02%2F669083%2Fauscrimestories_9now_nextgenstandardcard.png"
+            },
+            "webpSizes": {
+              "w320": "https://imageresizer.static9.net.au/hAyZJlb9KfPxuhQdY7YN7znjHCE=/320x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F02%2F669083%2Fauscrimestories_9now_nextgenstandardcard.png",
+              "w480": "https://imageresizer.static9.net.au/W77zKqCeuJDJqvRLziq_3m0dTHk=/480x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F02%2F669083%2Fauscrimestories_9now_nextgenstandardcard.png",
+              "w768": "https://imageresizer.static9.net.au/q4yLMALzrLOgzOY0EJOstVZKNxo=/768x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F02%2F669083%2Fauscrimestories_9now_nextgenstandardcard.png",
+              "w1280": "https://imageresizer.static9.net.au/4fDRkqKEwFlYYI1LfC2lhnBFMqQ=/1280x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F02%2F669083%2Fauscrimestories_9now_nextgenstandardcard.png",
+              "w1920": "https://imageresizer.static9.net.au/dg1jGwWYAqLCI0uvFzP0bRHeDsE=/1920x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2025%2F02%2F669083%2Fauscrimestories_9now_nextgenstandardcard.png"
+            }
+          }
+        }, {
+          "id": 3370,
+          "name": "The Chelsea Detective",
+          "slug": "the-chelsea-detective",
+          "subtitle": "8 Episodes",
+          "image": {
+            "alt": "Season 2",
+            "sizes": {
+              "w320": "https://imageresizer.static9.net.au/Ig-OT_T9E-meXZ-NrcAwGdIPuXI=/320x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F08%2F626367%2Fthechelseadetective_s2_9now_standardcard.jpg",
+              "w480": "https://imageresizer.static9.net.au/-S5PnTwc4ug1EonxAuJ7Fqx3ac8=/480x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F08%2F626367%2Fthechelseadetective_s2_9now_standardcard.jpg",
+              "w768": "https://imageresizer.static9.net.au/bRuN5QiW6DWbYChCTiZKMle32_k=/768x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F08%2F626367%2Fthechelseadetective_s2_9now_standardcard.jpg",
+              "w1280": "https://imageresizer.static9.net.au/vBILMrD3s-3W36V4I-7I2MrqciQ=/1280x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F08%2F626367%2Fthechelseadetective_s2_9now_standardcard.jpg",
+              "w1920": "https://imageresizer.static9.net.au/KIJoXBkz8W4HVgeJUMNKV1aN0wY=/1920x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F08%2F626367%2Fthechelseadetective_s2_9now_standardcard.jpg"
+            },
+            "webpSizes": {
+              "w320": "https://imageresizer.static9.net.au/hZZMURWnmZy78U7wyRJu3cCVaUw=/320x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F08%2F626367%2Fthechelseadetective_s2_9now_standardcard.jpg",
+              "w480": "https://imageresizer.static9.net.au/1OAJ0fNyyn7DCP5jdPXx9raFGpk=/480x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F08%2F626367%2Fthechelseadetective_s2_9now_standardcard.jpg",
+              "w768": "https://imageresizer.static9.net.au/dOngG5RLsmKhHWqL9tR0FjBKZYE=/768x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F08%2F626367%2Fthechelseadetective_s2_9now_standardcard.jpg",
+              "w1280": "https://imageresizer.static9.net.au/GX-oL3umw__h_nPasuDyca5i57s=/1280x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F08%2F626367%2Fthechelseadetective_s2_9now_standardcard.jpg",
+              "w1920": "https://imageresizer.static9.net.au/LlGntmvCHa30H0Xoyc_S9EQysHY=/1920x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F08%2F626367%2Fthechelseadetective_s2_9now_standardcard.jpg"
+            }
+          }
+        }, {
+          "id": 3148,
+          "name": "The OC",
+          "slug": "the-oc",
+          "subtitle": "92 Episodes",
+          "image": {
+            "alt": "Season 4",
+            "sizes": {
+              "w320": "https://imageresizer.static9.net.au/dDwsrXnl8Rwfv3tkbREP7DTUXK0=/320x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2023%2F11%2F551506%2Ftheoc_s4_9now_standardcard.jpg",
+              "w480": "https://imageresizer.static9.net.au/bO_0W6Cda52lnU0KhAlDYyInpWg=/480x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2023%2F11%2F551506%2Ftheoc_s4_9now_standardcard.jpg",
+              "w768": "https://imageresizer.static9.net.au/eqCvuhIR5UU1ifHbs83R46DYzpc=/768x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2023%2F11%2F551506%2Ftheoc_s4_9now_standardcard.jpg",
+              "w1280": "https://imageresizer.static9.net.au/yAZlnaTJ-jkMUBZoN-RhW3qJajs=/1280x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2023%2F11%2F551506%2Ftheoc_s4_9now_standardcard.jpg",
+              "w1920": "https://imageresizer.static9.net.au/J-jLFZ2VbDP2P8LZqbMwJDLNYjo=/1920x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2023%2F11%2F551506%2Ftheoc_s4_9now_standardcard.jpg"
+            },
+            "webpSizes": {
+              "w320": "https://imageresizer.static9.net.au/-zfjkc_OSb8ornw0ebV_wJUuUtQ=/320x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2023%2F11%2F551506%2Ftheoc_s4_9now_standardcard.jpg",
+              "w480": "https://imageresizer.static9.net.au/NgfOVNfyVeq3_AdIUco5fBBp72c=/480x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2023%2F11%2F551506%2Ftheoc_s4_9now_standardcard.jpg",
+              "w768": "https://imageresizer.static9.net.au/a-65t5_dGvb4GcFvnRdIoPIYQuU=/768x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2023%2F11%2F551506%2Ftheoc_s4_9now_standardcard.jpg",
+              "w1280": "https://imageresizer.static9.net.au/d3zvaIpLPT-bD9v260iRYXwqKzo=/1280x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2023%2F11%2F551506%2Ftheoc_s4_9now_standardcard.jpg",
+              "w1920": "https://imageresizer.static9.net.au/NMQRSTu9qjW5sSiF7zs1Dq-vDEo=/1920x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2023%2F11%2F551506%2Ftheoc_s4_9now_standardcard.jpg"
+            }
+          }
+        }, {
+          "id": 3802,
+          "name": "The Fall",
+          "slug": "the-fall",
+          "subtitle": "17 Episodes",
+          "image": {
+            "alt": "Season 3",
+            "sizes": {
+              "w320": "https://imageresizer.static9.net.au/_jAuffvVe5J0iKKPCUPnDAe0-O4=/320x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F09%2F629109%2Fthefall_s3_9now_standardcard.png",
+              "w480": "https://imageresizer.static9.net.au/VZkuvQV8kMKz_KbWGLZG5lIU7XM=/480x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F09%2F629109%2Fthefall_s3_9now_standardcard.png",
+              "w768": "https://imageresizer.static9.net.au/WMp-xJrwTN1xYNPqfsX1Q1ZwQzY=/768x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F09%2F629109%2Fthefall_s3_9now_standardcard.png",
+              "w1280": "https://imageresizer.static9.net.au/MuSxHK6bHQqluJeM4axrecCO9Ak=/1280x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F09%2F629109%2Fthefall_s3_9now_standardcard.png",
+              "w1920": "https://imageresizer.static9.net.au/Cfbdl09hCDsoOkfansiL1cOVvq0=/1920x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F09%2F629109%2Fthefall_s3_9now_standardcard.png"
+            },
+            "webpSizes": {
+              "w320": "https://imageresizer.static9.net.au/gPnUtwlvlKphU2kYXqV6B06dQEo=/320x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F09%2F629109%2Fthefall_s3_9now_standardcard.png",
+              "w480": "https://imageresizer.static9.net.au/ozwR3bQ4K7J9kvLliyAz984ITPE=/480x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F09%2F629109%2Fthefall_s3_9now_standardcard.png",
+              "w768": "https://imageresizer.static9.net.au/TUdI0NHjoGRc7xnvR0Xo1doaugc=/768x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F09%2F629109%2Fthefall_s3_9now_standardcard.png",
+              "w1280": "https://imageresizer.static9.net.au/O42UU7HKjjNmd62Sb5JAmTtAWls=/1280x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F09%2F629109%2Fthefall_s3_9now_standardcard.png",
+              "w1920": "https://imageresizer.static9.net.au/i_nSFCcXhbIUjVf7Y2Aq0qEAxSI=/1920x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F09%2F629109%2Fthefall_s3_9now_standardcard.png"
+            }
+          }
+        }]
+      }
+    }
+  }
+}
+
+the good bits:
+==============
+
+const current_channel = {
+  video_url:  response.data.getLXP.stream.video.url,
+  video_type: ((response.data.getLXP.stream.video.streamType === 'hls') ? 'application/x-mpegurl' : 'application/dash+xml'),
+  name:       response.data.getLXP.stream.display.tagline,
+  epg:        response.data.getLXP.stream.display.listings // [{title, description, startDate, endDate}]
+}
+
+const other_channels = response.data.getLXP.switcherRail.map(function(channel) {
+  return {
+    id:   channel.slug,
+    name: channel.name,
+    epg:  channel.airings // [{title, startDate, endDate}]
+  }
+})
+
+--------------------------------------------------------------------------------
