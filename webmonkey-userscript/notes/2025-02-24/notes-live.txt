@@ -1,0 +1,228 @@
+--------------------------------------------------------------------------------
+
+channel:
+========
+https://www.9now.com.au/live/bbc-comedy
+
+--------------------------------------------------------------------------------
+
+request:
+========
+
+https://api.9now.com.au/web/live-experience?device=web&slug=bbc-comedy&streamParams=web%2Cfirefox%2Cwindows&region=nsw&offset=0
+
+response:
+=========
+
+{
+  "data": {
+    "getLXP": {
+      "market": {
+        "id": 1,
+        "name": "Sydney",
+        "regionId": 73,
+        "oztamPublisherId": "b0726746-500c-4cd6-bb5d-585f97caa0e8",
+        "createdAt": "2015-12-18T07:56:36.428Z",
+        "updatedAt": "2015-12-18T07:56:36.428Z",
+        "state": "nsw"
+      },
+      "region": {
+        "short": "nsw",
+        "fullName": "New South Wales"
+      },
+      "stream": {
+        "type": "live-event",
+        "slug": "event-cm2tn1mj200090gl4boc0euil",
+        "display": {
+          "color": "#02C7E1",
+          "tagline": "BBC Comedy",
+          "offset": null,
+          "promoImage": {
+            "sizes": {
+              "w320": "https://imageresizer.static9.net.au/5JEtky-kFFoqSD5nitpDIzRwVyQ=/320x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F649682%2Fbackground.png",
+              "w480": "https://imageresizer.static9.net.au/RaZzGvkYY5jBCQiZ4TWOhaPrP9k=/480x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F649682%2Fbackground.png",
+              "w768": "https://imageresizer.static9.net.au/nmueD90RLb3GHaqYpF7dF_x77cc=/768x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F649682%2Fbackground.png",
+              "w1280": "https://imageresizer.static9.net.au/rpk3i2g0lFu_bQsu3YxsWfsj_5c=/1280x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F649682%2Fbackground.png",
+              "w1920": "https://imageresizer.static9.net.au/Q5ExvThhmnzRgBf38kZC9fEq9Ck=/1920x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F649682%2Fbackground.png"
+            },
+            "webpSizes": {
+              "w320": "https://imageresizer.static9.net.au/bIve4FwY-62XaBBMOqjxaXY9spc=/320x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F649682%2Fbackground.png",
+              "w480": "https://imageresizer.static9.net.au/EPdYZXWgSt7oMDj5tZg3YSJ7N-s=/480x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F649682%2Fbackground.png",
+              "w768": "https://imageresizer.static9.net.au/Ox-sFSGb1K2zUWG1USLMGX0Vmco=/768x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F649682%2Fbackground.png",
+              "w1280": "https://imageresizer.static9.net.au/TLbYOQaPxnlTYqR9RIbl28JOqEg=/1280x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F649682%2Fbackground.png",
+              "w1920": "https://imageresizer.static9.net.au/PINULwgW5mv35rGob2uvO96sNjA=/1920x0/filters:format(webp)/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F11%2F649682%2Fbackground.png"
+            }
+          },
+          "ssoImage": {
+            "alt": "sso wall image",
+            "sizes": {
+              "w320": "https://imageresizer.static9.net.au/8K_RnBbmGQcEz_WvXvw8TZaEYdY=/320x0/https%3A%2F%2Fwww.9now.com.au%2FssoWall.jpg%3FexpireAt%3D2025-02-24T14%3A00%3A00.000Z",
+              "w480": "https://imageresizer.static9.net.au/KXaSEOqVpHFUKqz71QaiyHHuS58=/480x0/https%3A%2F%2Fwww.9now.com.au%2FssoWall.jpg%3FexpireAt%3D2025-02-24T14%3A00%3A00.000Z",
+              "w768": "https://imageresizer.static9.net.au/Yxt2Se93b2ET8qKe3gFBdAsrD2c=/768x0/https%3A%2F%2Fwww.9now.com.au%2FssoWall.jpg%3FexpireAt%3D2025-02-24T14%3A00%3A00.000Z",
+              "w1280": "https://imageresizer.static9.net.au/JOLIkeZ6Py7hZzQdPtSjt2-MOx0=/1280x0/https%3A%2F%2Fwww.9now.com.au%2FssoWall.jpg%3FexpireAt%3D2025-02-24T14%3A00%3A00.000Z",
+              "w1920": "https://imageresizer.static9.net.au/lw9BFDNJKPdndAAVLNp0LQwug8k=/1920x0/https%3A%2F%2Fwww.9now.com.au%2FssoWall.jpg%3FexpireAt%3D2025-02-24T14%3A00%3A00.000Z"
+            },
+            "webpSizes": {
+              "w320": "https://imageresizer.static9.net.au/uSGyvEchgoq-tTFyQqTyIdENnXs=/320x0/filters:format(webp)/https%3A%2F%2Fwww.9now.com.au%2FssoWall.jpg%3FexpireAt%3D2025-02-24T14%3A00%3A00.000Z",
+              "w480": "https://imageresizer.static9.net.au/CQEnlKL3WCBgoA5XozxD8L3W8Ds=/480x0/filters:format(webp)/https%3A%2F%2Fwww.9now.com.au%2FssoWall.jpg%3FexpireAt%3D2025-02-24T14%3A00%3A00.000Z",
+              "w768": "https://imageresizer.static9.net.au/oL22u4ENA3Quhm0GIoQhq6lGKeU=/768x0/filters:format(webp)/https%3A%2F%2Fwww.9now.com.au%2FssoWall.jpg%3FexpireAt%3D2025-02-24T14%3A00%3A00.000Z",
+              "w1280": "https://imageresizer.static9.net.au/ZkXYKsVVFmViEGuJetls4DCFFGQ=/1280x0/filters:format(webp)/https%3A%2F%2Fwww.9now.com.au%2FssoWall.jpg%3FexpireAt%3D2025-02-24T14%3A00%3A00.000Z",
+              "w1920": "https://imageresizer.static9.net.au/7kiVJv8_FOCJduiIDCAOhuh86ug=/1920x0/filters:format(webp)/https%3A%2F%2Fwww.9now.com.au%2FssoWall.jpg%3FexpireAt%3D2025-02-24T14%3A00%3A00.000Z"
+            }
+          },
+          "listings": [{
+            "title": "Roger and Val Have Just Got In",
+            "subtitle": "Season 1 - Reply All",
+            "tvSeriesSlug": null,
+            "description": "Roger's attempt to deal with his grief is about to get him into trouble at work.",
+            "classification": "M",
+            "genreString": "BBC",
+            "hasStreamingRights": true,
+            "promoStartDate": "2023-06-19T14:00:00.000Z",
+            "startDate": "2024-10-28T13:00:00.000Z",
+            "endDate": "2026-11-30T12:59:00.000Z",
+            "programStartDate": "2025-02-24T13:37:30.000Z",
+            "programEndDate": "2025-02-24T14:08:58.000Z",
+            "secondaryListing": {
+              "title": "Roger and Val Have Just Got In",
+              "subTitle": "Season 1 - The Valerie Step",
+              "tagline": "Up Next",
+              "startTime": null,
+              "endTime": null,
+              "programStartDate": "2025-02-24T14:08:58Z",
+              "programEndDate": "2025-02-24T14:40:12Z"
+            }
+          }],
+          "buttons": null
+        },
+        "video": {
+          "referenceId": "cm2tn1mj200090gl4boc0euil-ssai",
+          "oztamPublisherId": "a3d333fa-ae4e-4097-ae37-e4ec4086d150",
+          "ssai": {
+            "postfixParams": "pp=9now_live&iu=%2F133009657%2F9now%2Fweb%2Flive&yo.up=https&url=https://www.9now.com.au/live/event-cm2tn1mj200090gl4boc0euil&vid=event-cm2tn1mj200090gl4boc0euil&cmsid=2473820&yo.t.pf=8000&yo.ks=false&yo.pbr=false&yo.br=false&eventname=roger-and-val-have-just-got-in&show=bbc-comedy&season=2024&genre=bbc&yo.eb.fb=aHR0cHM6Ly85bm93LWxpdmVzdHJlYW1zLXYyLmFrYW1haXplZC5uZXQvcHJvZC9mYXN0L2JiYy9jb21lZHkvaGxzL3IxL2luZGV4Lm0zdTg=&live_tag=undefined"
+          },
+          "drm": null,
+          "url": null,
+          "assetId": null,
+          "fallbackId": null,
+          "streamType": null,
+          "hasDrm": false,
+          "isDai": true,
+          "quality": null,
+          "signpost": null
+        }
+      },
+      "switcherRail": [...],
+      "promoRail": {
+        "id": "586",
+        "slug": "bbc-comedy",
+        "type": "live-event-rail",
+        "items": [{
+          "description": "Roger's attempt to deal with his grief is about to get him into trouble at work.",
+          "displayName": "Roger and Val Have Just Got In",
+          "endDate": "2026-11-30T12:59:00.000Z",
+          "id": 3732,
+          "name": "Roger and Val Have Just Got In",
+          "slug": "event-cm2tn1mj200090gl4boc0euil",
+          "promoStartDate": "2023-06-19T14:00:00.000Z",
+          "programStartDate": "2025-02-24T13:37:30.000Z",
+          "programEndDate": "2025-02-24T14:08:58.000Z",
+          "startDate": "2024-10-28T13:00:00.000Z",
+          "subtitle": "Season 1 - Reply All",
+          "type": "live-event",
+          "image": {
+            "alt": "Roger and Val Have Just Got In live_event_image_live",
+            "sizes": {
+              "w320": "https://imageresizer.static9.net.au/fBNWpcaMFtBYKuSuf6kBcsq7k5I=/320x0/https%3A%2F%2Fimages.9vms.com.au%2Fle%2Ftv%2Fimages%2F2024%2F12%2F657644%2Fcomedy_alt.png%3Fif-image-type%3Dlive_event_fast_channel",
+              "w480": "https://imageresizer.static9.net.au/b7Rcqwge-S8p0Sa5alC5g0tirAE=/480x0/https%3A%2F%2Fimages.9vms.com.au%2Fle%2Ftv%2Fimages%2F2024%2F12%2F657644%2Fcomedy_alt.png%3Fif-image-type%3Dlive_event_fast_channel",
+              "w768": "https://imageresizer.static9.net.au/d8-YUkabvn9lPgbo5CATNg7NVrk=/768x0/https%3A%2F%2Fimages.9vms.com.au%2Fle%2Ftv%2Fimages%2F2024%2F12%2F657644%2Fcomedy_alt.png%3Fif-image-type%3Dlive_event_fast_channel",
+              "w1280": "https://imageresizer.static9.net.au/ZzD_HBnnInI4NY4pZTKtDAAcU2g=/1280x0/https%3A%2F%2Fimages.9vms.com.au%2Fle%2Ftv%2Fimages%2F2024%2F12%2F657644%2Fcomedy_alt.png%3Fif-image-type%3Dlive_event_fast_channel",
+              "w1920": "https://imageresizer.static9.net.au/CplUsQx6oTDVj19k7MEBXCHH0Jk=/1920x0/https%3A%2F%2Fimages.9vms.com.au%2Fle%2Ftv%2Fimages%2F2024%2F12%2F657644%2Fcomedy_alt.png%3Fif-image-type%3Dlive_event_fast_channel"
+            },
+            "webpSizes": {
+              "w320": "https://imageresizer.static9.net.au/01G1Hk0cf4A0nSgrIIJ_zFTo3Lo=/320x0/filters:format(webp)/https%3A%2F%2Fimages.9vms.com.au%2Fle%2Ftv%2Fimages%2F2024%2F12%2F657644%2Fcomedy_alt.png%3Fif-image-type%3Dlive_event_fast_channel",
+              "w480": "https://imageresizer.static9.net.au/uunwjrrn5PFG_sWVtER6SBBuUAo=/480x0/filters:format(webp)/https%3A%2F%2Fimages.9vms.com.au%2Fle%2Ftv%2Fimages%2F2024%2F12%2F657644%2Fcomedy_alt.png%3Fif-image-type%3Dlive_event_fast_channel",
+              "w768": "https://imageresizer.static9.net.au/PRSExE2GCF9cR5FTlW9r2dTotgc=/768x0/filters:format(webp)/https%3A%2F%2Fimages.9vms.com.au%2Fle%2Ftv%2Fimages%2F2024%2F12%2F657644%2Fcomedy_alt.png%3Fif-image-type%3Dlive_event_fast_channel",
+              "w1280": "https://imageresizer.static9.net.au/ZIAd1vJHrI-0U_9tjxNNMCoCDjg=/1280x0/filters:format(webp)/https%3A%2F%2Fimages.9vms.com.au%2Fle%2Ftv%2Fimages%2F2024%2F12%2F657644%2Fcomedy_alt.png%3Fif-image-type%3Dlive_event_fast_channel",
+              "w1920": "https://imageresizer.static9.net.au/rSQD8UuKvPUTdFxwjIes8HJAjvs=/1920x0/filters:format(webp)/https%3A%2F%2Fimages.9vms.com.au%2Fle%2Ftv%2Fimages%2F2024%2F12%2F657644%2Fcomedy_alt.png%3Fif-image-type%3Dlive_event_fast_channel"
+            }
+          }
+        }]
+      }
+    }
+  }
+}
+
+--------------------------------------------------------------------------------
+
+request:
+========
+
+curl 'https://edge.api.brightcove.com/playback/v1/accounts/4460760524001/videos/ref%3Acm2tn1mj200090gl4boc0euil-ssai' \
+  -H 'User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:109.0) Gecko/20100101 Firefox/115.0' \
+  -H 'Accept: application/json;pk=BCpkADawqM17uNt4BA9TibECIvv8vBVypgHHIgThenKM55b88yzwUAmQ5hHbEfpsaQCimxMfcJglqzWqPTc21Mbnt4H-49t8_htP91BPml8bDw7AjWou9m_avlno4V7DBRsuLWdpLOoUMziK' \
+  -H 'Accept-Language: en-US,en;q=0.5' \
+  -H 'Accept-Encoding: gzip, deflate, br' \
+  -H 'Origin: https://www.9now.com.au' \
+  -H 'DNT: 1' \
+  -H 'Connection: keep-alive' \
+  -H 'Referer: https://www.9now.com.au/' \
+  -H 'Sec-Fetch-Dest: empty' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Site: cross-site' \
+  -H 'TE: trailers'
+
+response:
+=========
+
+{
+  "poster": "https://cf-images.ap-southeast-2.prod.boltdns.net/v1/static/4460760524001/71f8bfd3-6169-469c-a482-e0e93c09f66a/406e1e93-4814-40cf-a439-fd38be22b952/640x360/match/image.jpg",
+  "thumbnail": "https://cf-images.ap-southeast-2.prod.boltdns.net/v1/static/4460760524001/71f8bfd3-6169-469c-a482-e0e93c09f66a/3b23630f-ea41-40b7-9b91-43708b6a158e/160x90/match/image.jpg",
+  "poster_sources": [{
+    "src": "https://cf-images.ap-southeast-2.prod.boltdns.net/v1/static/4460760524001/71f8bfd3-6169-469c-a482-e0e93c09f66a/406e1e93-4814-40cf-a439-fd38be22b952/640x360/match/image.jpg"
+  }],
+  "thumbnail_sources": [{
+    "src": "https://cf-images.ap-southeast-2.prod.boltdns.net/v1/static/4460760524001/71f8bfd3-6169-469c-a482-e0e93c09f66a/3b23630f-ea41-40b7-9b91-43708b6a158e/160x90/match/image.jpg"
+  }],
+  "description": "Stephen and Hugh engage in some modest raging before Hugh has his untimely obituary read.",
+  "tags": [],
+  "cue_points": [],
+  "custom_fields": {
+    "media_type": "tvLiveEvent"
+  },
+  "account_id": "4460760524001",
+  "sources": [{
+    "asset_id": "6363893451112",
+    "src": "https://csm-e-nineau1-eb.bln1.yospace.com/csm/extlive/nnaprd01,prod-fast-channels-bbc-comedy.m3u8",
+    "type": "application/vnd.apple.mpegurl"
+  }],
+  "name": "A Bit of Fry and Laurie",
+  "reference_id": "cm2tn1mj200090gl4boc0euil-ssai",
+  "long_description": null,
+  "duration": 0,
+  "economics": "FREE",
+  "text_tracks": [],
+  "published_at": "2024-10-28T23:16:45.128Z",
+  "created_at": "2024-10-28T23:16:45.134Z",
+  "updated_at": "2025-02-24T13:33:18.574Z",
+  "offline_enabled": false,
+  "link": null,
+  "id": "6363892298112",
+  "ad_keys": null
+}
+
+--------------------------------------------------------------------------------
+
+notes:
+======
+
+* video URL is obtained via the Brightcove API,
+  the same as VOD content
+* the same parameters are used:
+  - accountId
+  - policyKey
+* the parameter to identify the live video stream:
+  - referenceId = response.data.getLXP.stream.video.referenceId
+                = 'cm2tn1mj200090gl4boc0euil-ssai'
+
+--------------------------------------------------------------------------------
