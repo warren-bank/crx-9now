@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         9now
 // @description  Improve site usability. Watch videos in external player.
-// @version      3.1.0
+// @version      3.1.1
 // @include      /^https?:\/\/(?:[^\.\/]*\.)*9now\.com\.au\/.+\/episode-\d+(?:[#\?].*)?$/
 // @match        *://*.9now.com.au/live/*
 // @icon         https://www.9now.com.au/favicon.ico
@@ -1459,6 +1459,6 @@ var page_init = function() {
 }
 
 if (user_options.common.init_delay_ms)
-  setTimeout(page_init, user_options.common.init_delay_ms)
+  unsafeWindow.setTimeout(page_init, user_options.common.init_delay_ms)
 else
   page_init()
