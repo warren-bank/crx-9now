@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         9now
 // @description  Improve site usability. Watch videos in external player.
-// @version      3.1.2
+// @version      3.1.3
 // @include      /^https?:\/\/(?:[^\.\/]*\.)*9now\.com\.au\/.+\/episode-\d+(?:[#\?].*)?$/
 // @match        *://*.9now.com.au/live/*
 // @icon         https://www.9now.com.au/favicon.ico
@@ -646,7 +646,7 @@ var obtain_brightcove_api_parameters = function(callback) {
   }
 
   var $brightcove_script_src = null
-  var $brightcove_script, appConfig
+  var $brightcove_script, appConfig, appPlayer
 
   if (!$brightcove_script_src) {
     $brightcove_script = unsafeWindow.document.querySelector('script[src*="players.brightcove.net"]')
@@ -659,8 +659,16 @@ var obtain_brightcove_api_parameters = function(callback) {
     try {
       appConfig = unsafeWindow.document.querySelector('script#appConfig[type="application/json"]')
       if (appConfig) {
-        appConfig = JSON.parse(appConfig.textContent)
-        $brightcove_script_src = 'https://players.brightcove.net/' + appConfig.webDedicatedPlayer.accountId + '/' + appConfig.webDedicatedPlayer.playerId + '_default/index.min.js'
+        try {
+          appConfig = JSON.parse(appConfig.textContent)
+          if (!appConfig) throw 0
+
+          appPlayer = appConfig.webDedicatedPlayer || appConfig.vodPlayer
+          if (!appPlayer) throw 0
+
+          $brightcove_script_src = 'https://players.brightcove.net/' + appPlayer.accountId + '/' + appPlayer.playerId + '_default/index.min.js'
+        }
+        catch(e) {}
       }
     }
     catch(e) {}
@@ -1410,20 +1418,19 @@ var page_init_livetv = function() {
 
 var page_init_shows = function() {
   var $inline_scripts = unsafeWindow.document.querySelectorAll('script:not([src])')
-  var $inline_script_text, needle, needle_index
+  var $inline_script_text, needle
   for (var i=0; i < $inline_scripts.length; i++) {
     $inline_script_text = $inline_scripts[i].textContent.trim()
 
-    if ($inline_script_text.indexOf('window.__data=') === 0) {
-      // contains: \"referenceId\":\"
+    needle = find_needle({
+      haystack: $inline_script_text,
+      needle:   '\\"referenceId\\":\\"',
+      tail:     '\\"',
+      strict:   true
+    })
 
-      state.episode.reference_id = find_needle({
-        haystack: $inline_script_text,
-        needle:   '\\"referenceId\\":\\"',
-        tail:     '\\"',
-        strict:   true
-      })
-
+    if (needle) {
+      state.episode.reference_id = needle
       break
     }
   }
